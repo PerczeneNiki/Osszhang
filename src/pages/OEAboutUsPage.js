@@ -8,12 +8,9 @@ import Starts from "components/features/OEStarts.js";
 import NavBar from "components/header/OENavBar.js";
 import ContactUsForm from "components/features/OEContactUs.js";
 
-
-
 import IlikeImage from "images/Ilike.png";
 import AniImage from "images/Ani.png";
 import KatiImage from "images/Kati.png";
-
 import BeaImage from "images/Bea.png";
 import IldiImage from "images/Ildi.png";
 import JuditImage from "images/Judit.png";
@@ -26,7 +23,21 @@ import VIldiImage from "images/VIldi.png";
 import ZsofiImage from "images/Zsofi.png";
 import TeamImage from "images/team-illustration.svg";
 
-import SzuloFotel from "images/szulofotel.jpg";
+import szuloFotel from "images/szulofotel.jpg";
+import katanili from "images/katanili.png";
+import goalsImage from "images/goals.jpg";
+
+import idea from "images/idea.jpg";
+import madeby from "images/madeby.jpg";
+import goals from "images/goalsicon.jpg";
+import time from "images/time.jpg";
+import contract from "images/contract.jpg";
+import work from "images/work.jpg";
+import heart from "images/heart.svg";
+
+import { ReactComponent as HeartIcon } from "feather-icons/dist/icons/heart.svg";
+
+
 
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
@@ -170,7 +181,21 @@ export default () => {
         heading="Az alapítás"
         buttonRounded={false}
         primaryButtonText="Bővebben"
-        imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
+        imageSrc={katanili}
+        features = {[
+          {
+            Icon: HeartIcon,
+            title: "Professionalism",
+            description: "valami",
+            iconContainerCss: tw`bg-teal-300 text-teal-800`
+          },
+          {
+            Icon: HeartIcon,
+            title: "Affordable",
+            description: "valami",
+            iconContainerCss: tw`bg-red-300 text-red-800`
+          }
+        ]}
       />
 
       <Starts
@@ -178,18 +203,48 @@ export default () => {
         heading="A szülőfotel"
         buttonRounded={false}
         primaryButtonText="Bővebben"
-        imageSrc={SzuloFotel}
+        imageSrc={szuloFotel}
         textOnLeft={false}
-      />
+        description="A fotel azért készült, hogy az édesanyáknak Egerben is legyen lehetőségük a most általános fekvő testhelyzettől eltérő szülési pozíciót választani. Az anyák nagyon szerettek, szeretnek a babzsákfotelban ülni. Felveszi a testük alakját, gyengéden támasztja meg, körbeöleli. Innen indultak el Ilike alkotó gondolatai."
+        features = {[
+          {
+            Icon: HeartIcon,
+            title: "Az ötlet",
+            description: "A fotel megálmodója Feithné Krajcsik Ilona. A megvalósulást az Összhang KHE finanszírozta.",
+            iconContainerCss: tw`bg-teal-300 text-teal-800`
+          },
+          {
+            Icon: HeartIcon,
+            title: "A megvalósítás",
+            description: "A fotelt a valóságban Csuka Emőke (Amőbafotel) alkotta meg. Szirtesi Attila alakította ki a rozsdamentes acélból a fotel alátámasztását",
+            iconContainerCss: tw`bg-red-300 text-red-800`
+          }
+        ]}
+/>
 
       <Starts id="goals"
         subheading={<Subheading>Kezdetek</Subheading>}
         heading="Céljaink"
         buttonRounded={false}
         primaryButtonText="Bővebben"
-        imageSrc="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80"
+        imageSrc={goalsImage}
+        features = {[
+          {
+            Icon: HeartIcon,
+            title: "Professionalism",
+            description: "valami",
+            iconContainerCss: tw`bg-teal-300 text-teal-800`
+          },
+          {
+            Icon: HeartIcon,
+            title: "Affordable",
+            description: "valami",
+            iconContainerCss: tw`bg-red-300 text-red-800`
+          }
+        ]}
+        
       />
-<ContactUsForm />
+      <ContactUsForm />
       <Footer />
     </AnimationRevealPage>
   );
