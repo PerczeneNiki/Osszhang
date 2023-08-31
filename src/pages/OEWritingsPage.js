@@ -27,6 +27,7 @@ export default () => {
         <FAQ 
         subheading="Régi írások az Egyesület alapítóinak tollából."
         heading={<>Várakozásról, szülésről, születésről</>}
+        description=""
         faqs={[
           {
             question: "Gyermekre várva: Félelmeink (Feithné Krajcsik Ilona)",

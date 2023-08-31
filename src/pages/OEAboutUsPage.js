@@ -27,13 +27,6 @@ import szuloFotel from "images/szulofotel.jpg";
 import katanili from "images/katanili.png";
 import goalsImage from "images/goals.jpg";
 
-import idea from "images/idea.jpg";
-import madeby from "images/madeby.jpg";
-import goals from "images/goalsicon.jpg";
-import time from "images/time.jpg";
-import contract from "images/contract.jpg";
-import work from "images/work.jpg";
-import heart from "images/heart.svg";
 
 import { ReactComponent as HeartIcon } from "feather-icons/dist/icons/heart.svg";
 
@@ -179,14 +172,15 @@ export default () => {
       <Starts id="starts"
         subheading={<Subheading>Kezdetek</Subheading>}
         heading="Az alapítás"
+        description="2009-ben azért jött létre az Összefogás a Szülés-Születés-Szoptatás Humanizációjáért Közhasznú Egyesület, hogy tevékenységével felhívja az édesanyák figyelmét a természetes vajúdási - szülési folyamatra; valamint az anyatejes táplálás és a szoptatás fontosságára és mindezek megvalósításához gyakorlati segítséget nyújtson."
         buttonRounded={false}
         primaryButtonText="Bővebben"
         imageSrc={katanili}
         features = {[
           {
             Icon: HeartIcon,
-            title: "Professionalism",
-            description: "valami",
+            title: "Mottó",
+            description: "„…napjaink erőszakos világának békéssé formálásához legelőször azt kell megváltoztatnunk, ahogy gyermekeinkkel bánunk, mégpedig életük legelső pillanatától kezdve.” (Thomas Verny)",
             iconContainerCss: tw`bg-teal-300 text-teal-800`
           },
           {
@@ -225,6 +219,8 @@ export default () => {
       <Starts id="goals"
         subheading={<Subheading>Kezdetek</Subheading>}
         heading="Céljaink"
+        description="Célunk még, hogy támogassuk a családokat intellektuálisan és érzelmileg a megváltozott élethelyzethez való alkalmazkodásban, támogatást nyújtsunk számukra a mindennapokban.
+        Tevékenységi körünk változik, bővül a gyerekek növekedésével, igényeivel, szükségleteivel."
         buttonRounded={false}
         primaryButtonText="Bővebben"
         imageSrc={goalsImage}
@@ -232,13 +228,13 @@ export default () => {
           {
             Icon: HeartIcon,
             title: "Professionalism",
-            description: "valami",
+            description: "Célunk, hogy tevékenységünkkel hozzájáruljunk az optimális életkezdet általános gyakorlattá tételéhez szükséges szemléletváltáshoz.",
             iconContainerCss: tw`bg-teal-300 text-teal-800`
           },
           {
             Icon: HeartIcon,
             title: "Affordable",
-            description: "valami",
+            description: "Célunk továbbá, hogy támogassuk a családokat abban, hogy „elég” boldog gyermekeket neveljenek, s ehhez nekik is csupán „elég” boldognak kell lenniük.",
             iconContainerCss: tw`bg-red-300 text-red-800`
           }
         ]}

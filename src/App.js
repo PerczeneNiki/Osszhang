@@ -7,8 +7,8 @@ import OEWeb from "mainpage/OEWeb.js";
 import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
 import OEAboutUsPage from "pages/OEAboutUsPage.js";
 import OEOurWorkPage from "pages/OEOurWorkPage.js";
-import OEReports from "pages/OEReports.js";
-import OEWritings from "pages/OEWritings.js";
+import OEReports from "pages/OEReportsPage.js";
+import OEWritings from "pages/OEWritingsPage.js";
 
 export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
