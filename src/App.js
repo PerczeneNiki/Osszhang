@@ -2,7 +2,7 @@ import React from "react";
 import GlobalStyles from 'styles/GlobalStyles';
 
 import MainPage from "mainpage/MainPage.js";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import AboutUsPage from "pages/AboutUsPage.js";
 import OurWorkPage from "pages/OurWorkPage.js";
 import Reports from "pages/ReportsPage.js";
