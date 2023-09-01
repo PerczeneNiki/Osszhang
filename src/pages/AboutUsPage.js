@@ -2,11 +2,11 @@ import React from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import tw from "twin.macro";
 import  { NavLink, NavLinks } from "../components/header/light.js";
-import Footer from "components/footers/OEFooter.js";
-import Members from "components/features/OEMembers.js";
-import Starts from "components/features/OEStarts.js";
-import NavBar from "components/header/OENavBar.js";
-import ContactUsForm from "components/features/OEContactUs.js";
+import Footer from "components/footers/Footer.js";
+import Members from "components/features/Members.js";
+import Starts from "components/features/Starts.js";
+import NavBar from "components/header/NavBar.js";
+import ContactUsForm from "components/features/ContactUs.js";
 
 import IlikeImage from "images/Ilike.png";
 import AniImage from "images/Ani.png";

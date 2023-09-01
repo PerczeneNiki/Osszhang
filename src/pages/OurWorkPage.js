@@ -3,12 +3,12 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import tw from "twin.macro";
 import styled from "styled-components"; //eslint-disable-line
 import  { NavLink, NavLinks} from "../components/header/light.js";
-import Footer from "components/footers/OEFooter.js";
-import Members from "components/features/OEMembers.js";
-import YearlyPrograms from "components/features/OEYearlyPrograms.js";
+import Footer from "components/footers/Footer.js";
+import Members from "components/features/Members.js";
+import YearlyPrograms from "components/features/YearlyPrograms.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-import NavBar from "components/header/OENavBar.js";
-import ContactUsForm from "components/features/OEContactUs.js";
+import NavBar from "components/header/NavBar.js";
+import ContactUsForm from "components/features/ContactUs.js";
 
 
 import waitImage from "images/waitfor.jpg";

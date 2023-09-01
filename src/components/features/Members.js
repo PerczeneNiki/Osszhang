@@ -9,7 +9,7 @@ import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
 import IlikeImage from "images/Ilike.png";
 import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
 import ReactModalAdapter from "../../helpers/ReactModalAdapter.js";
-import InfoModal from "components/infopages/OEInfoModal.js";
+import InfoModal from "components/infopages/InfoModal.js";
 
 
 const Heading = tw(SectionHeading)``;

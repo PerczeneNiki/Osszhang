@@ -3,9 +3,9 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import ReactModalAdapter from "../../helpers/ReactModalAdapter.js";
-import Partners from "components/infopages/OEPartners.js";
-import Supporters from "components/infopages/OESupporters.js";
-import InfoModal from "components/infopages/OEInfoModal.js";
+import Partners from "components/infopages/Partners.js";
+import Supporters from "components/infopages/Supporters.js";
+import InfoModal from "components/infopages/InfoModal.js";
 import alapitoOkirat from "documents/AlapitoOkirat.pdf"
 import ADATKEZELESI from "documents/ADATKEZELESI.pdf"
 import emailjs from 'emailjs-com';

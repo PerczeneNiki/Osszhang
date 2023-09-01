@@ -2,12 +2,12 @@ import React from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import NavBar from "components/header/OENavBar.js";
+import NavBar from "components/header/NavBar.js";
 import  { NavLinks } from "../components/header/light.js";
-import FAQ from "components/features/OEFAQ.js";
+import FAQ from "components/features/FAQ.js";
 
 
-import Footer from "components/footers/OEFooter.js";
+import Footer from "components/footers/Footer.js";
 
 
 
