@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import tw from "twin.macro";
 import styled from "styled-components"; //eslint-disable-line
@@ -26,6 +26,10 @@ const ThreeColumnContainer = styled.div`
 
 
 export default () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   const navLinks = [
     <NavLinks key={1}>
       <NavLink href="#activities">

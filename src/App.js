@@ -14,7 +14,7 @@ export default function App() {
 return (
     <>
       <GlobalStyles />
-      <Router >
+      <Router basename="/">
         <Routes>
         <Route  exaxt path="/" element={<MainPage/>} />
           <Route path="/aboutUs" element={<AboutUsPage />}  />

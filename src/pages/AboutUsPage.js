@@ -1,5 +1,6 @@
 import React from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
+import { useEffect } from "react";
 import tw from "twin.macro";
 import  { NavLink, NavLinks } from "../components/header/light.js";
 import Footer from "components/footers/Footer.js";
@@ -35,6 +36,10 @@ import { ReactComponent as HeartIcon } from "feather-icons/dist/icons/heart.svg"
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
 export default () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const navLinks = [
     <NavLinks key={1}>
       <NavLink href="#founders">

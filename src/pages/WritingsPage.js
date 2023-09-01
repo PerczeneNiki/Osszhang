@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts";
 import { css } from "styled-components/macro"; //eslint-disable-line
@@ -14,7 +14,11 @@ import Footer from "components/footers/Footer.js";
 
 
 export default () => {
-  
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+
   const navLinks = [
     <NavLinks key={1}></NavLinks>
   ];

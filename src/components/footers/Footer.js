@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
@@ -37,7 +38,11 @@ const ColumnHeading = tw.h5`mb-6 uppercase font-bold text-primary-500`;
 
 const LinkList = tw.ul`mt-6 text-sm font-medium inline-block`;
 const LinkListItem = tw.li`mt-3`;
-const Link = styled.a`
+const LinkItem = styled.a`
+${tw`mt-4 sm:mt-0 sm:ml-8 flex items-center text-secondary-300 transition duration-300 hover:text-primary-400 `}
+}
+`;
+const RouterLink = styled(Link)`
 ${tw`mt-4 sm:mt-0 sm:ml-8 flex items-center text-secondary-300 transition duration-300 hover:text-primary-400 `}
 }
 `;
@@ -97,39 +102,37 @@ export default () => {
           <Column>
             <LinkList>
               <LinkListItem>
-                <Link href = {ADATKEZELESI} target = "_blank">Adatvédelmi tájékoztató</Link>
+                <LinkItem href = {ADATKEZELESI} target = "_blank">Adatvédelmi tájékoztató</LinkItem>
               </LinkListItem>
               <LinkListItem>
-                <Link href = {alapitoOkirat} target = "_blank">Alapító okirat</Link>
+                <LinkItem href = {alapitoOkirat} target = "_blank">Alapító okirat</LinkItem>
               </LinkListItem>
               <LinkListItem>
-                <Link href="/reports">Beszámolók, támogatások</Link>
+                <RouterLink to="/reports">Beszámolók, támogatások</RouterLink>
               </LinkListItem>
               <LinkListItem>
-                <Link onClick={()=>{setOpenedModal(1); setNameModal("title"); setContentModal("about")}}>Támogatóink</Link>
+                <LinkItem onClick={()=>{setOpenedModal(1); setNameModal("title"); setContentModal("about")}}>Támogatóink</LinkItem>
               </LinkListItem>
             </LinkList>
           </Column>
           <Column>
-            {/* <ColumnHeading>Product</ColumnHeading> */}
             <LinkList>
-              
               <LinkListItem>
-                <Link onClick={()=>setOpenedModal(2)}>Társszervezetek</Link>
+                <LinkItem onClick={()=>setOpenedModal(2)}>Társszervezetek</LinkItem>
               </LinkListItem>
               <LinkListItem>
-                <Link href="https://www.facebook.com/OsszhangEgyesulet/events">Programjaink, szolgáltatásaink</Link>
+                <LinkItem href="https://www.facebook.com/OsszhangEgyesulet/events">Programjaink, szolgáltatásaink</LinkItem>
               </LinkListItem>
               <LinkListItem>
-                <Link onClick={()=>{
+                <LinkItem onClick={()=>{
                   setOpenedModal(3); 
                   setImgModal(LogoImage);
                   setLinkModal("https://szulesszuletes.hu/");
                   setNameModal("Séta a szülés-születés minőségéért"); 
-                  setContentModal("Évente megrendezett esemény, melyen az Egyesület elnöke is részt szokott venni. \nA sétával arra hívják fel a szervezők a figyelmet, hogy milyen messzire nyúló jelentősége lehet annak, hogy a szülés /születés milyen élmény az édesanya, a baba és a család számára.")}}>SzüléSzületés séta</Link>
+                  setContentModal("Évente megrendezett esemény, melyen az Egyesület elnöke is részt szokott venni. \nA sétával arra hívják fel a szervezők a figyelmet, hogy milyen messzire nyúló jelentősége lehet annak, hogy a szülés /születés milyen élmény az édesanya, a baba és a család számára.")}}>SzüléSzületés séta</LinkItem>
               </LinkListItem>
               <LinkListItem>
-                <Link href="/writings">Várakozásról, szülésről, születésről</Link>
+                <RouterLink to="/writings">Várakozásról, szülésről, születésről</RouterLink>
               </LinkListItem>
             </LinkList>
           </Column>

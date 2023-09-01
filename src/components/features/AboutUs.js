@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import ResponsiveVideoEmbed from "../../helpers/ResponsiveVideoEmbed.js";
+import AboutUsPage from "pages/AboutUsPage.js";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
@@ -46,7 +48,7 @@ export default ({id="aboutus",
   ),
   description = "Célunk, hogy elősegítsük és támogassuk a szülés-születés-szoptatás humanizációját, valamint az anya és gyermeke közötti korai kötődés kialakulását. Szervezetünk szakmai háttérrel rendelkező, civil szervezet, amely számos programmal és tevékenységgel támogatja az édesanyákat és családokat az optimális életkezdet megvalósításában. Csatlakozz hozzánk, és légy részese egy összetartó közösségnek, amely segít a gyermekvállalás örömeiben és kihívásaiban!",
   primaryButtonText = "Tudj meg többet",
-  primaryButtonUrl = "/aboutUs",
+  primaryButtonUrl = "/#aboutUs",
   buttonRounded = true,
   textOnLeft = true
 }) => {
@@ -66,8 +68,8 @@ export default ({id="aboutus",
             <Subheading>{subheading}</Subheading>
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
-            <PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>
-              {primaryButtonText}
+            <PrimaryButton buttonRounded={buttonRounded}>
+              <Link to="/aboutUs">{primaryButtonText}</Link>
             </PrimaryButton>
           </TextContent>
         </TextColumn>

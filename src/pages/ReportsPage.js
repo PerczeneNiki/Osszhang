@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts";
 import tw from "twin.macro";
@@ -56,8 +56,11 @@ ${tw`mt-4 sm:mt-0 sm:ml-8 flex items-center text-secondary-300 transition durati
 }
 `;
 
-export default ({ headingText = "Privacy Policy" }) => {
-  
+export default () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const navLinks = [
     <NavLinks key={1}></NavLinks>
   ];

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
@@ -104,8 +105,8 @@ export default ({ id="mainActivities",
         
       </ThreeColumnContainer>
       <ThreeColumnContainer>
-      <PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>
-              {primaryButtonText}
+      <PrimaryButton buttonRounded={buttonRounded} >
+      <Link to="/ourWork">{primaryButtonText}</Link>
             </PrimaryButton>
             </ThreeColumnContainer>
       <DecoratorBlob />
