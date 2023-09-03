@@ -24,10 +24,10 @@ const HeroContainer = tw.div`z-20 relative px-6 sm:px-8 mx-auto h-full flex flex
 
 export default ({ id="navbar", navLinks = [
   <NavLinks key={1}>
-    <NavLink to="#aboutus">
+    <NavLink href="/#aboutus">
       Rólunk
     </NavLink>
-    <NavLink to="#mainActivities">
+    <NavLink href="/#mainActivities">
       Tevékenység
     </NavLink>   
     <NavLink href="#perinat">

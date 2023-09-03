@@ -4,7 +4,6 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import ReactModalAdapter from "../../helpers/ReactModalAdapter.js";
-import Partners from "components/infopages/Partners.js";
 import Supporters from "components/infopages/Supporters.js";
 import InfoModal from "components/infopages/InfoModal.js";
 import alapitoOkirat from "documents/AlapitoOkirat.pdf"
@@ -17,15 +16,15 @@ import { ReactComponent as InstaIcon } from "images/insta-icon.svg";
 import { ReactComponent as YoutubeIcon } from "images/youtube-icon.svg";
 
 const StyledModal = styled(ReactModalAdapter)`
-  &.mainHeroModal__overlay {
-    ${tw`fixed inset-0 z-50`}
-  }
-  &.mainHeroModal__content {
-    ${tw`xl:mx-auto m-4 sm:m-16 max-w-screen-xl absolute inset-0 flex justify-center items-center rounded-lg bg-gray-500 outline-none`}
-  }
-  .content {
-    ${tw`w-full lg:p-16`}
-  }
+&.mainHeroModal__overlay {
+  ${tw`fixed inset-x-0 top-0 z-50 ` }
+}
+&.mainHeroModal__content {
+  ${tw`xl:mx-auto m-4 sm:m-16 max-w-screen-lg inset-0 flex items-center rounded-xl bg-gray-300 border-2 border-primary-500 outline-none`}
+}
+.content {
+  ${tw`w-full lg:p-16`}
+}
 `;
 
 const Container = tw.div`relative bg-gray-200 text-gray-700 -mb-8 -mx-8 px-8 py-20 lg:py-24`;
@@ -87,6 +86,7 @@ function sendEmail(e){
 export default () => {
   const [openedModal, setOpenedModal] = useState(0);
   const [contentModal, setContentModal] = useState("");
+  const [itemsModal, setItemsModal] = useState("");
   const [nameModal, setNameModal] = useState("");
   const [imgModal, setImgModal] = useState("");
   const [linkModal, setLinkModal] = useState("");
@@ -111,14 +111,60 @@ export default () => {
                 <RouterLink to="/reports">Beszámolók, támogatások</RouterLink>
               </LinkListItem>
               <LinkListItem>
-                <LinkItem onClick={()=>{setOpenedModal(1); setNameModal("title"); setContentModal("about")}}>Támogatóink</LinkItem>
+                <LinkItem onClick={()=>{
+                  setOpenedModal(1); 
+                  setNameModal("Támogatóink"); 
+                  setContentModal("Hálásan köszönjük támogatóinknak, hogy segítik Egyesületünk fennmaradását és munkánkat.");
+                  setItemsModal([
+                    {
+                      profileImageSrc:
+                        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80",
+                      heading: "XY rendszeres támogatás",
+                      quote:
+                        "Van egyáltalán ilyenünk?",
+                      customerName: "Charlotte Hale",
+                      customerTitle: "Delos Inc."
+                    },
+                    {
+                      profileImageSrc:
+                        "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
+                      heading: "Másik támogató",
+                      quote:
+                        "Ő is támogat, vagynem...",
+                      customerName: "Adam Cuppy",
+                      customerTitle: "Founder, EventsNYC"
+                    }
+                  ])}}>Támogatóink</LinkItem>
               </LinkListItem>
             </LinkList>
           </Column>
           <Column>
             <LinkList>
               <LinkListItem>
-                <LinkItem onClick={()=>setOpenedModal(2)}>Társszervezetek</LinkItem>
+                <LinkItem onClick={()=>{
+                  setOpenedModal(1); 
+                  setNameModal("Társszervezetek"); 
+                  setContentModal("Szervezetek akikkel kapcsolódunk.");
+                  setItemsModal([
+                    {
+                      profileImageSrc:
+                        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80",
+                      heading: "valami",
+                      quote:
+                        "társszervezet1",
+                      customerName: "Charlotte Hale",
+                      customerTitle: "Delos Inc."
+                    },
+                    {
+                      profileImageSrc:
+                        "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
+                      heading: "valami más",
+                      quote:
+                        "társzervezet2",
+                      customerName: "Adam Cuppy",
+                      customerTitle: "Founder, EventsNYC"
+                    }
+                  ])}}>Társszervezetek</LinkItem>
               </LinkListItem>
               <LinkListItem>
                 <LinkItem href="https://www.facebook.com/OsszhangEgyesulet/events">Programjaink, szolgáltatásaink</LinkItem>
@@ -179,20 +225,8 @@ export default () => {
           onRequestClose={()=>setOpenedModal(0)}
         >          
           <div className="content">
-          <Supporters id="supporters"/>
-          </div>
-
-        </StyledModal>
-        {/*TODO: supporters és partners összevonása, csak tartalommegadás a önkéntesek bemutatkozásokhoz hasonlóan*/}
-        <StyledModal
-          closeTimeoutMS={300}
-          className="mainHeroModal"
-          isOpen={openedModal === 2}
-          shouldCloseOnOverlayClick={true}
-          onRequestClose={()=>setOpenedModal(0)}
-        >          
-          <div className="content">
-          <Partners id="partners" />
+          <Supporters id="supporters" heading={nameModal} items={itemsModal} description={contentModal}
+  />
           </div>
         </StyledModal>
         <StyledModal
