@@ -1,6 +1,7 @@
 import React from "react";
 import GlobalStyles from 'styles/GlobalStyles';
-
+import { Fragment } from 'react';
+import ScrollButton from "helpers/ScrollButton";
 import MainPage from "mainpage/MainPage.js";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import AboutUsPage from "pages/AboutUsPage.js";
@@ -13,6 +14,7 @@ export default function App() {
   // return <AnimationRevealPage disabled>xxxxxxxxxx</AnimationRevealPage>;
 return (
     <>
+    
       <GlobalStyles />
       <Router basename="/">
         <Routes>
@@ -23,6 +25,7 @@ return (
           <Route path="/writings" element={ <Writings />} />
         </Routes>
       </Router>
+      <ScrollButton />
     </>
 );
 }
