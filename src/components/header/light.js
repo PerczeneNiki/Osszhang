@@ -49,6 +49,7 @@ export const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-b
 export const NavToggle = tw.button`
    z-20 focus:outline-none hocus:text-primary-500 transition duration-300
 `;
+
 export const MobileNavLinks = motion(styled.div`
   ${tw` z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white`}
   ${NavLinks} {
@@ -95,11 +96,11 @@ export default ({
 
       <MobileNavLinksContainer css={collapseBreakpointCss.mobileNavLinksContainer}>
         {logoLink}
-        <MobileNavLinks initial={{ x: "150%", display: "none" }} animate={animation} css={collapseBreakpointCss.mobileNavLinks}>
+        <MobileNavLinks onClick={toggleNavbar} initial={{ x: "150%", display: "none" }}  animate={animation} css={collapseBreakpointCss.mobileNavLinks}>
           {links}
         </MobileNavLinks>
         <NavToggle onClick={toggleNavbar} className={showNavLinks ? "open" : "closed"}>
-          {showNavLinks ? <CloseIcon tw="w-6 h-6" /> : <MenuIcon tw="w-6 h-6" />}
+          {showNavLinks ? <CloseIcon tw="w-6 h-6" /> : <MenuIcon tw="w-6 h-6" />} 
         </NavToggle>
       </MobileNavLinksContainer>
     </Header>

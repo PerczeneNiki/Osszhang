@@ -5,7 +5,6 @@ import styled from "styled-components";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import ResponsiveVideoEmbed from "../../helpers/ResponsiveVideoEmbed.js";
-import AboutUsPage from "pages/AboutUsPage.js";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
