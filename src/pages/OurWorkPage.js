@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import tw from "twin.macro";
 import styled from "styled-components"; //eslint-disable-line
-import  { NavLink, NavLinks} from "../components/header/light.js";
+import  { MyHashLink, NavLinks} from "../components/header/light.js";
 import Footer from "components/footers/Footer.js";
 import Members from "components/features/Members.js";
 import YearlyPrograms from "components/features/YearlyPrograms.js";
@@ -32,15 +32,13 @@ export default () => {
   
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="#activities">
+      <MyHashLink smooth to="#activities">
         Tevékenységi köreink
-      </NavLink>
-      <NavLink href="#yearlyprograms">
+      </MyHashLink>
+      <MyHashLink smooth to="#yearlyprograms">
         Évkör
-      </NavLink>
-      <NavLink href="#yearlyprograms">
-        Éves programunk
-      </NavLink>
+      </MyHashLink>
+      
     </NavLinks>
   ];
 

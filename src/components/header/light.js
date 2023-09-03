@@ -1,4 +1,6 @@
 import React from "react";
+import { genericHashLink } from 'react-router-hash-link';
+import { Link } from "react-router-dom";
 import {motion} from "framer-motion"; 
 import tw from "twin.macro";
 import styled from "styled-components";
@@ -23,6 +25,9 @@ export const NavLink = tw.a`
   pb-1 border-b-2 border-transparent hover:border-primary-900 hocus:text-primary-900
 `;
 
+export const MyHashLink = genericHashLink(NavLink);
+
+
 export const PrimaryLink = tw(NavLink)`
   lg:mx-0
   px-8 py-3 rounded bg-primary-700 text-white
@@ -30,13 +35,15 @@ export const PrimaryLink = tw(NavLink)`
   border-b-0
 `;
 
-export const LogoLink = styled(NavLink)`
+export const LogoLink = styled(Link)`
   ${tw`flex items-center font-black border-b-0 text-2xl! ml-0!`};
 
   img {
     ${tw`w-10 mr-3`}
   }
 `;
+const LogoHashLink = genericHashLink(LogoLink);
+
 
 export const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-between`;
 export const NavToggle = tw.button`
@@ -58,8 +65,8 @@ export default ({
   logoLink, 
   links, 
   contactLink,
-    className, 
-    collapseBreakpointClass = "lg" }) => {
+  className, 
+  collapseBreakpointClass = "lg" }) => {
   const defaultLinks = [
     <NavLinks key={1}>
     </NavLinks>,
@@ -69,10 +76,10 @@ export default ({
   const collapseBreakpointCss = collapseBreakPointCssMap[collapseBreakpointClass];
 
   const defaultLogoLink = (
-    <LogoLink href="/">
+    <LogoHashLink to="/">
       <img src={logo} alt="logo" />
       Összhang Egyesület
-    </LogoLink>
+    </LogoHashLink>
   );
 
   logoLink = logoLink || defaultLogoLink;

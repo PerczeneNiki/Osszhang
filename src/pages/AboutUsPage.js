@@ -2,7 +2,7 @@ import React from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import { useEffect } from "react";
 import tw from "twin.macro";
-import  { NavLink, NavLinks } from "../components/header/light.js";
+import  { MyHashLink, NavLinks } from "../components/header/light.js";
 import Footer from "components/footers/Footer.js";
 import Members from "components/features/Members.js";
 import Starts from "components/features/Starts.js";
@@ -42,18 +42,18 @@ export default () => {
 
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="#founders">
+      <MyHashLink smooth to="#founders">
         Alapítók
-      </NavLink>
-      <NavLink href="#members">
+      </MyHashLink>
+      <MyHashLink smooth to="#members">
         Önkénteseink
-      </NavLink>
-      <NavLink href="#starts">
+      </MyHashLink>
+      <MyHashLink smooth to="#starts">
         Hogyan kezdődött?
-      </NavLink>
-      <NavLink href="#goals">
+      </MyHashLink>
+      <MyHashLink smooth to="#goals">
         Céljaink
-      </NavLink>
+      </MyHashLink>
     </NavLinks>
   ];
   return (

@@ -1,12 +1,13 @@
 import React from "react";
+import { genericHashLink } from 'react-router-hash-link';
 import tw from "twin.macro";
 import styled from "styled-components";
-import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "./light.js";
+import Header, { MyHashLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "./light.js";
 
 
 const StyledHeader = styled(Header)`
   ${tw`pt-8 max-w-none w-full`}
-  ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
+  ${DesktopNavLinks} ${MyHashLink}, ${LogoLink} {
     ${tw` hover:border-primary-900 `}
   }
   ${NavToggle}.closed { 
@@ -15,37 +16,41 @@ const StyledHeader = styled(Header)`
 `;
 
 
+
 const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8 bg-center bg-cover min-h-10`}
 `;
 
+const MyPrimaryHashLink = genericHashLink(PrimaryLink);
+
+
 const HeroContainer = tw.div`z-20 relative px-6 sm:px-8 mx-auto h-full flex flex-col`;
 
 export default ({ id="navbar", navLinks = [
   <NavLinks key={1}>
-    <NavLink href="/#aboutus">
+    <MyHashLink smooth  to="/#aboutus">
       Rólunk
-    </NavLink>
-    <NavLink href="/#mainActivities">
+    </MyHashLink>
+    <MyHashLink smooth  to="/#mainActivities">
       Tevékenység
-    </NavLink>   
-    <NavLink href="#perinat">
+    </MyHashLink>   
+    <MyHashLink smooth  to="#perinat">
       Perinatális segítők
-    </NavLink> 
-    <NavLink href="#onepercent">
+    </MyHashLink> 
+    <MyHashLink smooth to="#onepercent" >
       Támogatás
-    </NavLink>
-    <NavLink href="#faq">
+    </MyHashLink>
+    <MyHashLink smooth to="#faq" >
       GYIK
-    </NavLink>
+    </MyHashLink>
   </NavLinks>
 ],
 contactLink=[
   <NavLinks key={2}>
-    <PrimaryLink href="#contactUs">
+    <MyPrimaryHashLink smooth to="#contactUs">
       Írj nekünk!
-    </PrimaryLink>
+    </MyPrimaryHashLink>
   </NavLinks>] }) => {
   
   return (
