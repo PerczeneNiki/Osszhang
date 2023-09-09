@@ -97,7 +97,7 @@ export default () => {
       <Content>
         <SixColumns>
         <Column>
-        <iframe title="osszhangLocation" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d668.6931652133547!2d20.370875654341976!3d47.902085323399994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47408d95e5c64b8d%3A0x1149b456b140b2d8!2zw5Zzc3poYW5nIEVneWVzw7xsZXQ!5e0!3m2!1shu!2shu!4v1693346325093!5m2!1shu!2shu" width="300" height="200" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe title="osszhangLocation" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d668.6931652133547!2d20.370875654341976!3d47.902085323399994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47408d95e5c64b8d%3A0x1149b456b140b2d8!2zw5Zzc3poYW5nIEVneWVzw7xsZXQ!5e0!3m2!1shu!2shu!4v1693346325093!5m2!1shu!2shu" width="300" height="200" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
           </Column>
           <Column>
             <LinkList>

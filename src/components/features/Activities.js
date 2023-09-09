@@ -4,7 +4,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { SectionDescription } from "components/misc/Typography.js";
-import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
+import { PrimaryButton as PrimaryButtonBase} from "components/misc/Buttons.js";
 
 import defaultCardImage from "images/shield-icon.svg";
 

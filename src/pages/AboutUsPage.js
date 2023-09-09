@@ -2,7 +2,7 @@ import React from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import { useEffect } from "react";
 import tw from "twin.macro";
-import  { MyHashLink, NavLinks } from "../components/header/light.js";
+import  { MyHashLink, NavLinks  } from "../components/header/light.js";
 import Footer from "components/footers/Footer.js";
 import Members from "components/features/Members.js";
 import Starts from "components/features/Starts.js";

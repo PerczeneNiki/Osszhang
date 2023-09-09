@@ -20,6 +20,8 @@ const Header = tw.header`
 export const NavLinks = tw.div`inline-block`;
 
 export const NavLink = tw.a`
+whitespace-nowrap
+inline-block
   text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300 text-primary-500
   pb-1 border-b-2 border-transparent hover:border-primary-900 hocus:text-primary-900
@@ -29,10 +31,10 @@ export const MyHashLink = genericHashLink(NavLink);
 
 
 export const PrimaryLink = tw(NavLink)`
-  lg:mx-0
+  lg:mx-0 whitespace-nowrap
   px-8 py-3 rounded bg-primary-700 text-white
   hocus:bg-primary-900 hocus:text-gray-200 focus:shadow-outline
-  border-b-0
+  border-b-0 
 `;
 
 export const LogoLink = styled(Link)`
