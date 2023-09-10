@@ -38,11 +38,17 @@ import { ReactComponent as HeartIcon } from "feather-icons/dist/icons/heart.svg"
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
 export default () => {
-  const [IlikeText, setIlikeText] = useState("");
+  const [names, setNames] = useState("");
+  const [imageSrcs, setImageSrcs] = useState("");
+  const [descriptions, setDescriptions] = useState("");
+  const [abouts, setAbouts] = useState("");
   useEffect(() => {
     async function main() {
-    const IText = await fetch(IlikeBemutatkozas).then((res) => res.text());
-    setIlikeText(IText);
+    const Text = await fetch(IlikeBemutatkozas).then((res) => res.text());
+    setNames(Text.split("|").at(0).split(":").at(1).split(";"));
+    setImageSrcs(Text.split("|").at(1).split(":").at(1).split(";"));
+    setDescriptions(Text.split("|").at(2).split(":").at(1).split(";"));
+    setAbouts(Text.split("|").at(3).split(":").at(1).split(";"));
   }
   main();
     window.scrollTo(0, 0)
@@ -72,21 +78,21 @@ export default () => {
       <Members id="founders" heading="Alapítók" cards={[
         {
           imageSrc: IlikeImage,
-          title: "Feithné Krajcsik Ilona",
-          description: "perinatális szaktanácsadó, önkéntes szoptatást segítő, jógaoktató, ének-zene szakos tanár",
-          about: IlikeText,
+          title: names.at(0),
+          description: descriptions.at(0),
+          about: abouts.at(0),
         },
         {
           imageSrc: KatiImage,
-          title: "Tolnay Katalin",
-          description: "mentálhigiénés szakember, transzpeszonális terapeuta",
-          about: "A lelki egészség helyreállításában segítem a hozzám fordulókat. Egyéni és csoportos folyamatokat kísérek. A perinatális témához anyaságom élménye vezetett. Tagja vagyok az Orosz Katalin klinikai pszichológus irányításával működő Születés Kísérleti Műhelynek. Az ő módszerén alapuló Születni - Újjászületni csoportokban dolgozva sok tapasztalatot és tudást szereztem a születés életre gyakorolt hatásáról. Ez az élmény motiválja a munkámat. ",
+          title: names.at(1),
+          description: descriptions.at(1),
+          about: abouts.at(1),
         },
         {
           imageSrc: AniImage,
-          title: "Hasilló Annamária",
-          description: "szülésznő, csecsemő és kisgyermeknevelő, IBCLC és SE laktációs szaktanácsadó, perinatális szaktanácsadó",
-          about: "A hivatástudat, ami meghatározza életutamat. A legnagyobb elismerés számomra, az Anyák bizalma. Nekik köszönhetem, hogy 2011-ben az Év Bábája lettem, és Eger városának lakossága azzal jutalmazott, hogy 2012-ben az Év Emberének választott, majd 2016–ban, Eger Csillagának. 2012-ben Magyarország Köztársasági Elnökének Érdemérmének kitüntetését, az államfő a baba- és mamabarát szülés megteremtésében játszott aktív szerepem elismeréseként adta.",
+          title: names.at(2),
+          description: descriptions.at(2),
+          about: abouts.at(2),
         }]} />
       <Members id="members" heading="Önkénteseink" cards={[
         {
