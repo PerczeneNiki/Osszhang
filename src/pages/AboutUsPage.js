@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import { useEffect } from "react";
 import tw from "twin.macro";
@@ -10,6 +10,8 @@ import NavBar from "components/header/NavBar.js";
 import ContactUsForm from "components/features/ContactUs.js";
 
 import IlikeImage from "images/Ilike.png";
+import IlikeBemutatkozas from 'texts/IlikeBemutatkozas.txt';
+
 import AniImage from "images/Ani.png";
 import KatiImage from "images/Kati.png";
 import BeaImage from "images/Bea.png";
@@ -36,7 +38,13 @@ import { ReactComponent as HeartIcon } from "feather-icons/dist/icons/heart.svg"
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
 export default () => {
+  const [IlikeText, setIlikeText] = useState("");
   useEffect(() => {
+    async function main() {
+    const IText = await fetch(IlikeBemutatkozas).then((res) => res.text());
+    setIlikeText(IText);
+  }
+  main();
     window.scrollTo(0, 0)
   }, [])
 
@@ -55,8 +63,10 @@ export default () => {
         Céljaink
       </MyHashLink>
     </NavLinks>
+    
   ];
   return (
+    
     <AnimationRevealPage>
       <NavBar id="aboutpageNavbar" roundedHeaderButton={true} navLinks={navLinks}/>
       <Members id="founders" heading="Alapítók" cards={[
@@ -64,7 +74,7 @@ export default () => {
           imageSrc: IlikeImage,
           title: "Feithné Krajcsik Ilona",
           description: "perinatális szaktanácsadó, önkéntes szoptatást segítő, jógaoktató, ének-zene szakos tanár",
-          about: "2000-ben léptem a jóga útjára. Több tanfolyamot végeztem, aztán 2009-ben a Himalájai jóga tradició 3 éves iskolája elvégzésével nemzetközi jógaoktatói oklevelet kaptam . Közben már elvégeztem a Birthligt kimama, baba-mama jógaoktatói tanfolyamait.  Ugyan ebben az évben végeztem az ELTE perinatális szaktanacsadó szakán. Két felnőtt gyermekem van. Két unokám. 2009-ben megalapítottuk az Összhang Közhasznú Egyesületet. Azóta vagyok az elnöke.",
+          about: IlikeText,
         },
         {
           imageSrc: KatiImage,
