@@ -42,13 +42,22 @@ export default () => {
   const [imageSrcs, setImageSrcs] = useState("");
   const [descriptions, setDescriptions] = useState("");
   const [abouts, setAbouts] = useState("");
+  const [foundersCards, setFoundersCards] = useState("");
   useEffect(() => {
     async function main() {
-    const Text = await fetch(IlikeBemutatkozas).then((res) => res.text());
-    setNames(Text.split("|").at(0).split(":").at(1).split(";"));
-    setImageSrcs(Text.split("|").at(1).split(":").at(1).split(";"));
-    setDescriptions(Text.split("|").at(2).split(":").at(1).split(";"));
-    setAbouts(Text.split("|").at(3).split(":").at(1).split(";"));
+    let importedData = await fetch(IlikeBemutatkozas).then((res) => res.text());
+    importedData=importedData.split("|")
+    
+    let temp = importedData.at(0).split(":").at(1).split(";");
+    setNames(temp.map((item) => item.split("=").at(1)));
+    temp = importedData.at(1).split(":").at(1).split(";");
+    setImageSrcs(temp.map((item) => item.split("=").at(1)));
+    temp = importedData.at(2).split(":").at(1).split(";");
+    setDescriptions(temp.map((item) => item.split("=").at(1)));
+    temp = importedData.at(3).split(":").at(1).split(";");
+    setAbouts(temp.map((item) => item.split("=").at(1)));
+
+
   }
   main();
     window.scrollTo(0, 0)
@@ -76,24 +85,24 @@ export default () => {
     <AnimationRevealPage>
       <NavBar id="aboutpageNavbar" roundedHeaderButton={true} navLinks={navLinks}/>
       <Members id="founders" heading="Alapítók" cards={[
-        {
-          imageSrc: IlikeImage,
-          title: names.at(0),
-          description: descriptions.at(0),
-          about: abouts.at(0),
-        },
-        {
-          imageSrc: KatiImage,
-          title: names.at(1),
-          description: descriptions.at(1),
-          about: abouts.at(1),
-        },
-        {
-          imageSrc: AniImage,
-          title: names.at(2),
-          description: descriptions.at(2),
-          about: abouts.at(2),
-        }]} />
+  {
+    imageSrc: IlikeImage,
+    title: names.at(0),
+    description: descriptions.at(0),
+    about: abouts.at(0),
+  },
+  {
+    imageSrc: KatiImage,
+    title: names.at(1),
+    description: descriptions.at(1),
+    about: abouts.at(1),
+  },
+  {
+    imageSrc: AniImage,
+    title: names.at(2),
+    description: descriptions.at(2),
+    about: abouts.at(2),
+  }]} />
       <Members id="members" heading="Önkénteseink" cards={[
         {
           imageSrc: IlikeImage,
