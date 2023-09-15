@@ -190,8 +190,8 @@ export default () => {
                 Minden hónap végén elküldjük Neked a következő hónap eseményeit és egyéb érdekes és hasznos információkat
               </SubscribeText>
               <SubscribeForm method="get" action="#" onSubmit={sendEmail}>
-                <Input type="email" name="from_email" placeholder="Your Email Address" />
-                <SubscribeButton type="submit">Subscribe</SubscribeButton>
+                <Input type="email" name="from_email" placeholder="Email-cím" />
+                <SubscribeButton type="submit">Feliratkozás</SubscribeButton>
               </SubscribeForm>
             </SubscribeNewsletterContainer>
           </SubscribeNewsletterColumn>
