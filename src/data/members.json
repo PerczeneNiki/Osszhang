@@ -1,0 +1,95 @@
+{
+	"items": [
+		{
+			"src": "images/Ilike.png",
+			"description": "perinatális szaktanácsadó",
+			"name": "Feithné Krajcsik Ilona",
+			"about": "2000-ben léptem a jóga útjára. Több tanfolyamot végeztem, aztán 2009-ben a Himalájai jóga tradició 3 éves iskolája elvégzésével nemzetközi jógaoktatói oklevelet kaptam. Közben már elvégeztem a Birthligt kimama, baba-mama jógaoktatói tanfolyamait.  Ugyanebben az évben végeztem az ELTE perinatális szaktanacsadó szakán. Két felnőtt gyermekem van. Két unokám. 2009-ben megalapítottuk az Összhang Közhasznú Egyesületet. Azóta vagyok az elnöke."
+		},
+		{
+			"src": "images/Kati.png",
+			"description": "mentálhigiéniés szakember",
+			"name": "Tolnai Katalin",
+			"about": "A lelki egészség helyreállításában segítem a hozzám fordulókat. Egyéni és csoportos folyamatokat kísérek. A perinatális témához anyaságom élménye vezetett. Tagja vagyok az Orosz Katalin klinikai pszichológus irányításával működő Születés Kísérleti Műhelynek. Az ő módszerén alapuló Születni - Újjászületni csoportokban dolgozva sok tapasztalatot és tudást szereztem a születés életre gyakorolt hatásáról. Ez az élmény motiválja a munkámat."
+		},
+		{
+          "src": "images/Judit.png",
+          "description": "???",
+          "name": "Bereczné Dobos Judit",
+          "about": "gyógypedagógus, logopédus tanár terapeuta, SZPT játékmester"
+        },
+        {
+          "src": "images/Zsofi.png",
+          "description": "???",
+          "name": "Holló Zsófia",
+          "about": "Bemutatkozás"
+        },
+        {
+          "src": "images/Niki.png",
+          "description": "???",
+          "name": "Perczéné Menyhárt Nikolett",
+          "about": "Bemutatkozás"
+        },
+        {
+          "src": "images/Patti.png",
+          "description": "???",
+          "name": "Fehérné Nagy Patricia",
+          "about": "Bemutatkozás"
+        },
+        {
+          "src": "images/Luca.png",
+          "description": "???",
+          "name": "Mezei Luca",
+          "about": "Bemutatkozás"
+        },
+        {
+          "src": "images/Reka.png",
+          "description": "???",
+          "name": "Oláh-Kristóf Réka",
+          "about": "Bemutatkozás"
+        },
+        {
+          "src": "images/Ildi.png",
+          "description": "???",
+          "name": "Tóth Ildi",
+          "about": "Bemutatkozás"
+        },
+        {
+          "src": "images/Bea.png",
+          "description": "???",
+          "name": "Bakondi Beatrix",
+          "about": "Bemutatkozás"
+        },
+        {
+          "src": "images/VIldi.png",
+          "description": "???",
+          "name": "Szakácsné Veszprémi Ildi",
+          "about": "Bemutatkozás"
+        },
+        {
+          "src": "images/Szandra.png",
+          "description": "???",
+          "name": "Veréb Szandra",
+          "about": "Bemutatkozás"
+        },
+        {
+          "src": "images/Team.png",
+          "description": "???",
+          "name": "Alagyi-Kása Fanni",
+          "about": "Bemutatkozás"
+        },
+        {
+          "src": "images/Team.png",
+          "description": "???",
+          "name": "Héjja-Nagy Katalin",
+          "about": "Bemutatkozás"
+        },
+        {
+          "src": "images/Team.png",
+          "description": "???",
+          "name": "Szilágyi Katalin",
+          "about": "Bemutatkozás"
+        }
+		
+	]
+}

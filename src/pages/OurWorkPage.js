@@ -11,9 +11,9 @@ import NavBar from "components/header/NavBar.js";
 import ContactUsForm from "components/features/ContactUs.js";
 
 
-import waitImage from "images/waitfor.jpg";
-import withbaby from "images/withbaby.jpg";
-import perinatalsession from "images/perinatalsession.jpg";
+import waitImage from "images/waitfor.png";
+import withbaby from "images/withbaby.png";
+import perinatalsession from "images/perinatalsession.png";
 
 const PrimaryButton = styled(PrimaryButtonBase)(props => [
   tw`mt-0 md:mt-0 text-sm inline-block items-center mx-auto md:mx-0`,

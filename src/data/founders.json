@@ -1,0 +1,22 @@
+{
+	"items": [
+		{
+			"name": "Feithné Krajcsik Ilona",
+			"src": "images/Ilike.png",
+			"description": "perinatális szaktanácsadó",
+			"about": "2000-ben léptem a jóga útjára. Több tanfolyamot végeztem, aztán 2009-ben a Himalájai jóga tradició 3 éves iskolája elvégzésével nemzetközi jógaoktatói oklevelet kaptam. Közben már elvégeztem a Birthligt kimama, baba-mama jógaoktatói tanfolyamait.  Ugyanebben az évben végeztem az ELTE perinatális szaktanacsadó szakán. Két felnőtt gyermekem van. Két unokám. 2009-ben megalapítottuk az Összhang Közhasznú Egyesületet. Azóta vagyok az elnöke."
+		},
+		{
+			"name": "Tolnai Katalin",
+			"src": "images/Kati.png",
+			"description": "mentálhigiéniés szakember",
+			"about": "A lelki egészség helyreállításában segítem a hozzám fordulókat. Egyéni és csoportos folyamatokat kísérek. A perinatális témához anyaságom élménye vezetett. Tagja vagyok az Orosz Katalin klinikai pszichológus irányításával működő Születés Kísérleti Műhelynek. Az ő módszerén alapuló Születni - Újjászületni csoportokban dolgozva sok tapasztalatot és tudást szereztem a születés életre gyakorolt hatásáról. Ez az élmény motiválja a munkámat."
+		},
+		{
+			"name": "Hasilló Annamária",
+			"src": "images/Ani.png",
+			"description": "szülésznő, csecsemő és kisgyermeknevelő, szaktanácsadó",
+			"about": "A hivatástudat, ami meghatározza életutamat. A legnagyobb elismerés számomra, az Anyák bizalma. Nekik köszönhetem, hogy 2011-ben az Év Bábája lettem, és Eger városának lakossága azzal jutalmazott, hogy 2012-ben az Év Emberének választott, majd 2016–ban, Eger Csillagának. 2012-ben Magyarország Köztársasági Elnökének Érdemérmének kitüntetését, az államfő a baba- és mamabarát szülés megteremtésében játszott aktív szerepem elismeréseként adta."
+		}
+	]
+}

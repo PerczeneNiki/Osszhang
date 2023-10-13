@@ -8,9 +8,11 @@ import Members from "components/features/Members.js";
 import Starts from "components/features/Starts.js";
 import NavBar from "components/header/NavBar.js";
 import ContactUsForm from "components/features/ContactUs.js";
+import foundersData from "data/founders.json";
+import membersData from "data/members.json";
 
 import IlikeImage from "images/Ilike.png";
-import IlikeBemutatkozas from 'texts/IlikeBemutatkozas.txt';
+//import IlikeBemutatkozas from 'texts/IlikeBemutatkozas.txt';
 
 import AniImage from "images/Ani.png";
 import KatiImage from "images/Kati.png";
@@ -38,30 +40,17 @@ import { ReactComponent as HeartIcon } from "feather-icons/dist/icons/heart.svg"
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
 export default () => {
-  const [names, setNames] = useState("");
-  const [imageSrcs, setImageSrcs] = useState("");
-  const [descriptions, setDescriptions] = useState("");
-  const [abouts, setAbouts] = useState("");
-  const [foundersCards, setFoundersCards] = useState("");
-  useEffect(() => {
-    async function main() {
-    let importedData = await fetch(IlikeBemutatkozas).then((res) => res.text());
-    importedData=importedData.split("|")
-    
-    let temp = importedData.at(0).split(":").at(1).split(";");
-    setNames(temp.map((item) => item.split("=").at(1)));
-    temp = importedData.at(1).split(":").at(1).split(";");
-    setImageSrcs(temp.map((item) => item.split("=").at(1)));
-    temp = importedData.at(2).split(":").at(1).split(";");
-    setDescriptions(temp.map((item) => item.split("=").at(1)));
-    temp = importedData.at(3).split(":").at(1).split(";");
-    setAbouts(temp.map((item) => item.split("=").at(1)));
+  // const [names, setNames] = useState("");
+  // const [imageSrcs, setImageSrcs] = useState("");
+  // const [descriptions, setDescriptions] = useState("");
+  // const [abouts, setAbouts] = useState("");
+  // const [foundersCards, setFoundersCards] = useState("");
 
-
-  }
-  main();
-    window.scrollTo(0, 0)
-  }, [])
+  const foundersItems = foundersData["items"];
+  const membersItems = membersData["items"];
+   useEffect(() => {
+     window.scrollTo(0, 0)
+   }, [])
 
   const navLinks = [
     <NavLinks key={1}>
@@ -80,122 +69,29 @@ export default () => {
     </NavLinks>
     
   ];
-  return (
-    
+  return (    
     <AnimationRevealPage>
       <NavBar id="aboutpageNavbar" roundedHeaderButton={true} navLinks={navLinks}/>
       <Members id="founders" heading="Alapítók" cards={[
-  {
-    imageSrc: IlikeImage,
-    title: names.at(0),
-    description: descriptions.at(0),
-    about: abouts.at(0),
-  },
-  {
-    imageSrc: KatiImage,
-    title: names.at(1),
-    description: descriptions.at(1),
-    about: abouts.at(1),
-  },
-  {
-    imageSrc: AniImage,
-    title: names.at(2),
-    description: descriptions.at(2),
-    about: abouts.at(2),
-  }]} />
+        foundersItems.map((item) => (
+          {
+            imageSrc: item["src"],
+            title: item["name"],
+            descriptions: item["description"],
+            about: item["about"]
+          }
+        ))
+      ]}/>
+      
       <Members id="members" heading="Önkénteseink" cards={[
-        {
-          imageSrc: IlikeImage,
-          description: "Elnök",
-          title: "Feithné Krajcsik Ilona",
-          about: "2000-ben léptem a jóga útjára. Több tanfolyamot végeztem, aztán 2009-ben a Himalájai jóga tradició 3 éves iskolája elvégzésével nemzetközi jógaoktatói oklevelet kaptam . Közben már elvégeztem a Birthligt kimama, baba-mama jógaoktatói tanfolyamait.  Ugyan ebben az évben végeztem az ELTE perinatális szaktanacsadó szakán. Két felnőtt gyermekem van. Két unokám. 2009-ben megalapítottuk az Összhang Közhasznú Egyesületet. Azóta vagyok az elnöke.",
-
-        },
-        {
-          imageSrc: KatiImage,
-          description: "???",
-          title: "Tolnay Katalin",
-          about: "A lelki egészség helyreállításában segítem a hozzám fordulókat. Egyéni és csoportos folyamatokat kísérek. A perinatális témához anyaságom élménye vezetett. Tagja vagyok az Orosz Katalin klinikai pszichológus irányításával működő Születés Kísérleti Műhelynek. Az ő módszerén alapuló Születni - Újjászületni csoportokban dolgozva sok tapasztalatot és tudást szereztem a születés életre gyakorolt hatásáról. Ez az élmény motiválja a munkámat. ",
-        },
-        {
-          imageSrc: JuditImage,
-          description: "???",
-          title: "Bereczné Dobos Judit",
-          about: "gyógypedagógus, logopédus tanár terapeuta, SZPT játékmester",
-        },
-        {
-          imageSrc: ZsofiImage,
-          description: "???",
-          title: "Holló Zsófia",
-          about: "Bemutatkozás",
-        },
-        {
-          imageSrc: NikiImage,
-          description: "???",
-          title: "Perczéné Menyhárt Nikolett",
-          about: "Bemutatkozás",
-        },
-        {
-          imageSrc: PattiImage,
-          description: "???",
-          title: "Fehérné Nagy Patricia",
-          about: "Bemutatkozás",
-        },
-        {
-          imageSrc: LucaImage,
-          description: "???",
-          title: "Mezei Luca",
-          about: "Bemutatkozás",
-        },
-        {
-          imageSrc: RekaImage,
-          description: "???",
-          title: "Oláh-Kristóf Réka",
-          about: "Bemutatkozás",
-        },
-        {
-          imageSrc: IldiImage,
-          description: "???",
-          title: "Tóth Ildi",
-          about: "Bemutatkozás",
-        },
-        {
-          imageSrc: BeaImage,
-          description: "???",
-          title: "Bakondi Beatrix",
-          about: "Bemutatkozás",
-        },
-        {
-          imageSrc: VIldiImage,
-          description: "???",
-          title: "Szakácsné Veszprémi Ildi",
-          about: "Bemutatkozás",
-        },
-        {
-          imageSrc: SzandraImage,
-          description: "???",
-          title: "Veréb Szandra",
-          about: "Bemutatkozás",
-        },
-        {
-          imageSrc: TeamImage,
-          description: "???",
-          title: "Alagyi-Kása Fanni",
-          about: "Bemutatkozás",
-        },
-        {
-          imageSrc: TeamImage,
-          description: "???",
-          title: "Héjja-Nagy Katalin",
-          about: "Bemutatkozás",
-        },
-        {
-          imageSrc: TeamImage,
-          description: "???",
-          title: "Szilágyi Katalin",
-          about: "Bemutatkozás",
-        },
-        
+         membersItems.map((item) => (
+          {
+            imageSrc: item["src"],
+            title: item["name"],
+            descriptions: item["description"],
+            about: item["about"]
+          }
+        ))
 
       ]
       } />

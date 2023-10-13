@@ -38,7 +38,7 @@ export const PrimaryLink = tw(NavLink)`
 `;
 
 export const LogoLink = styled(Link)`
-  ${tw`flex items-center font-black border-b-0 text-2xl! ml-0!`};
+  ${tw`flex items-center font-black text-primary-500 border-b-0 text-2xl! ml-0!`};
 
   img {
     ${tw`w-10 mr-3`}

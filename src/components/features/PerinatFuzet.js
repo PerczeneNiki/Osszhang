@@ -42,8 +42,8 @@ export default ({id="perinat",
     </>
   ),
   description = "Összegyűjtöttük Heves vármegye perinatális segítőit, a kiadványban olyan szakembereket találtok, akik a várandósság tervezésétől a gyermek 2 éves koráig (vagy azon túl) állnak rendelkezésetekre.",
-  primaryButtonText = "Letöltés (hamarosan)",
-  primaryButtonUrl = "",
+  primaryButtonText = "Letöltés",
+  primaryButtonUrl = "https://drive.google.com/file/d/1UmrPxX5VJeUGjb2Wz0o1pgcVle6RyUIO/view",
   buttonRounded = true,
   features = null,
   textOnLeft = true
@@ -81,7 +81,7 @@ export default ({id="perinat",
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
            
-            <PrimaryButton buttonRounded={buttonRounded} as="a" >
+            <PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>
               {primaryButtonText}
             </PrimaryButton>
           </TextContent>

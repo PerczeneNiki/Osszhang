@@ -83,19 +83,19 @@ export default ({id="",
   const [contentModal, setContentModal] = useState("");
   const [nameModal, setNameModal] = useState("");
   const [imgModal, setImgModal] = useState("");
-
   return (
+    
     <Container id={id}>
       <ContentWithPaddingXl>
         {subheading && <Subheading>{subheading}</Subheading>}
         {heading && <Heading>{heading}</Heading>}
         {description && <Description>{description}</Description>}
         <ThreeColumnContainer>
-          {cards.map((card, i) => (
+          {cards[0].map((card, i) => (
             <Column key={i}>
-              <Card onClick={() => {setShowModal(true); setNameModal(card.title);setContentModal(card.about);setImgModal(card.imageSrc)}}>
+              { <Card onClick={() => {setShowModal(true); setNameModal(card.title);setContentModal(card.about);setImgModal(card.imageSrc)}}>
                 <span className="imageContainer" css={imageContainerCss}>
-                  <img src={card.imageSrc} alt="" css={imageCss} />
+                  <img src={window.location.origin + "/" +card.imageSrc} alt="hiba" css={imageCss} />
                 </span>
                 <span className="title">{card.title}</span>
                 <p className="description">{card.description}</p>
@@ -105,7 +105,7 @@ export default ({id="",
                     <ArrowRightIcon className="icon" />
                   </span>
                 )}
-              </Card>
+              </Card> }
             </Column>
           ))}
         </ThreeColumnContainer>

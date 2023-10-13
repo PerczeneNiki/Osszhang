@@ -187,7 +187,7 @@ export default () => {
             <SubscribeNewsletterContainer>
               <ColumnHeading>Iratkozz fel programértesítő leveleinkre</ColumnHeading>
               <SubscribeText>
-                Minden hónap végén elküldjük Neked a következő hónap eseményeit és egyéb érdekes és hasznos információkat
+                Minden hónapban elküldjük Neked a következő hónap eseményeit és egyéb érdekes és hasznos információkat
               </SubscribeText>
               <SubscribeForm method="get" action="#" onSubmit={sendEmail}>
                 <Input type="email" name="from_email" placeholder="Email-cím" />
