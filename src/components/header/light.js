@@ -52,14 +52,14 @@ export const NavToggle = tw.button`
    z-20 focus:outline-none hocus:text-primary-500 transition duration-300
 `;
 
-export const MobileNavLinks = motion(styled.div`
+export const MobileNavLinks = motion(styled(Link)`
   ${tw` z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white`}
   ${NavLinks} {
     ${tw`flex flex-col items-center`}
   }
 `);
 
-export const DesktopNavLinks = tw.nav`
+export const DesktopNavLinks = tw(Link)`
   hidden flex-1 justify-between items-center
 `;
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import { useEffect } from "react";
 import tw from "twin.macro";
@@ -6,27 +6,13 @@ import  { MyHashLink, NavLinks  } from "../components/header/light.js";
 import Footer from "components/footers/Footer.js";
 import Members from "components/features/Members.js";
 import Starts from "components/features/Starts.js";
+import Reviews from "components/features/Reviews.js";
 import NavBar from "components/header/NavBar.js";
 import ContactUsForm from "components/features/ContactUs.js";
 import foundersData from "data/founders.json";
 import membersData from "data/members.json";
+import reviewsData from "data/reviews.json";
 
-import IlikeImage from "images/Ilike.png";
-//import IlikeBemutatkozas from 'texts/IlikeBemutatkozas.txt';
-
-import AniImage from "images/Ani.png";
-import KatiImage from "images/Kati.png";
-import BeaImage from "images/Bea.png";
-import IldiImage from "images/Ildi.png";
-import JuditImage from "images/Judit.png";
-import LucaImage from "images/Luca.png";
-import NikiImage from "images/Niki.png";
-import PattiImage from "images/Patti.png";
-import RekaImage from "images/Reka.png";
-import SzandraImage from "images/Szandra.png";
-import VIldiImage from "images/VIldi.png";
-import ZsofiImage from "images/Zsofi.png";
-import TeamImage from "images/team-illustration.svg";
 
 import szuloFotel from "images/szulofotel.jpg";
 import katanili from "images/katanili.png";
@@ -35,19 +21,12 @@ import goalsImage from "images/goals.jpg";
 
 import { ReactComponent as HeartIcon } from "feather-icons/dist/icons/heart.svg";
 
-
-
-
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
 export default () => {
-  // const [names, setNames] = useState("");
-  // const [imageSrcs, setImageSrcs] = useState("");
-  // const [descriptions, setDescriptions] = useState("");
-  // const [abouts, setAbouts] = useState("");
-  // const [foundersCards, setFoundersCards] = useState("");
-
+  
   const foundersItems = foundersData["items"];
   const membersItems = membersData["items"];
+  const reviewsItems = reviewsData["items"];
    useEffect(() => {
      window.scrollTo(0, 0)
    }, [])
@@ -66,6 +45,9 @@ export default () => {
       <MyHashLink smooth to="#goals">
         Céljaink
       </MyHashLink>
+      <MyHashLink smooth to="#reviews">
+        Vélemények
+      </MyHashLink>
     </NavLinks>
     
   ];
@@ -77,7 +59,7 @@ export default () => {
           {
             imageSrc: item["src"],
             title: item["name"],
-            descriptions: item["description"],
+            description: item["description"],
             about: item["about"]
           }
         ))
@@ -88,7 +70,7 @@ export default () => {
           {
             imageSrc: item["src"],
             title: item["name"],
-            descriptions: item["description"],
+            description: item["description"],
             about: item["about"]
           }
         ))
@@ -166,6 +148,17 @@ export default () => {
         ]}
         
       />
+      <Reviews id="reviews" heading="Vélemények" reviews={[
+         reviewsItems.map((item) => (
+          {
+            Icon: HeartIcon,
+            name: item["name"],
+            review: item["review"]
+          }
+        ))
+
+      ]
+      } />
       <ContactUsForm />
       <Footer />
     </AnimationRevealPage>

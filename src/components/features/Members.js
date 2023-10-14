@@ -83,6 +83,7 @@ export default ({id="",
   const [contentModal, setContentModal] = useState("");
   const [nameModal, setNameModal] = useState("");
   const [imgModal, setImgModal] = useState("");
+  cards[0].map((card, i) => (console.log(card.description)));
   return (
     
     <Container id={id}>

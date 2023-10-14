@@ -2,55 +2,55 @@
 	"items": [
 		{
 			"src": "images/Ilike.png",
-			"description": "perinatális szaktanácsadó",
+			"description": "Az Egyesület elnöke, perinatális szaktanácsadó, okleveles jógaoktató",
 			"name": "Feithné Krajcsik Ilona",
 			"about": "2000-ben léptem a jóga útjára. Több tanfolyamot végeztem, aztán 2009-ben a Himalájai jóga tradició 3 éves iskolája elvégzésével nemzetközi jógaoktatói oklevelet kaptam. Közben már elvégeztem a Birthligt kimama, baba-mama jógaoktatói tanfolyamait.  Ugyanebben az évben végeztem az ELTE perinatális szaktanacsadó szakán. Két felnőtt gyermekem van. Két unokám. 2009-ben megalapítottuk az Összhang Közhasznú Egyesületet. Azóta vagyok az elnöke."
 		},
 		{
 			"src": "images/Kati.png",
-			"description": "mentálhigiéniés szakember",
+			"description": "mentálhigiénés segítő szakember, transzperszonális terapeuta",
 			"name": "Tolnai Katalin",
 			"about": "A lelki egészség helyreállításában segítem a hozzám fordulókat. Egyéni és csoportos folyamatokat kísérek. A perinatális témához anyaságom élménye vezetett. Tagja vagyok az Orosz Katalin klinikai pszichológus irányításával működő Születés Kísérleti Műhelynek. Az ő módszerén alapuló Születni - Újjászületni csoportokban dolgozva sok tapasztalatot és tudást szereztem a születés életre gyakorolt hatásáról. Ez az élmény motiválja a munkámat."
 		},
 		{
           "src": "images/Judit.png",
-          "description": "???",
+          "description": "SZPT játékmester, gyógypedagógus-logopédus, óvodapedagógus",
           "name": "Bereczné Dobos Judit",
           "about": "gyógypedagógus, logopédus tanár terapeuta, SZPT játékmester"
         },
         {
           "src": "images/Zsofi.png",
-          "description": "???",
+          "description": "baba-, és gyermekhordozási tanácsadó, dúla",
           "name": "Holló Zsófia",
-          "about": "Bemutatkozás"
+          "about": "Gyermekeim születése indított el az úton, melynek során küldetéssé érett bennem a gyermekàgyas időszakhoz kapcsolódó hiteles információk átadása, a felkèszítőimen a gyakorlati túlèlőpraktikàkon a túl a lehetséges nehézségekről és ezek élettani hátteréről is mesèlek. Másik szívügyem az evolúciós gyermeknevelés és a babahordozás nèpszerűsítése, valamint a családok támogatása hordozási tanácsadóként. Keress bizalommal!"
         },
         {
           "src": "images/Niki.png",
-          "description": "???",
+          "description": "tanár, képzésben lévő női kör vezető",
           "name": "Perczéné Menyhárt Nikolett",
           "about": "Bemutatkozás"
         },
         {
           "src": "images/Patti.png",
-          "description": "???",
+          "description": "dúla, gyermekágyas segítő",
           "name": "Fehérné Nagy Patricia",
           "about": "Bemutatkozás"
         },
         {
           "src": "images/Luca.png",
-          "description": "???",
+          "description": "gyermekágyas segítő, önkéntes szoptatástámogató, hordozási tanácsadó",
           "name": "Mezei Luca",
           "about": "Bemutatkozás"
         },
         {
           "src": "images/Reka.png",
-          "description": "???",
+          "description": "hordozási tanácsadó, gyógypedagógus",
           "name": "Oláh-Kristóf Réka",
           "about": "Bemutatkozás"
         },
         {
           "src": "images/Ildi.png",
-          "description": "???",
+          "description": "dúla",
           "name": "Tóth Ildi",
           "about": "Bemutatkozás"
         },
@@ -68,19 +68,19 @@
         },
         {
           "src": "images/Szandra.png",
-          "description": "???",
+          "description": "integrál önismereti tanácsadó, bodywork csoportvezető, családállító, dúla",
           "name": "Veréb Szandra",
           "about": "Bemutatkozás"
         },
         {
           "src": "images/Team.png",
-          "description": "???",
+          "description": "klinikai szakpszichológus",
           "name": "Alagyi-Kása Fanni",
           "about": "Bemutatkozás"
         },
         {
           "src": "images/Team.png",
-          "description": "???",
+          "description": "pszichológus, perinatális szaktanácsadó",
           "name": "Héjja-Nagy Katalin",
           "about": "Bemutatkozás"
         },
@@ -88,6 +88,12 @@
           "src": "images/Team.png",
           "description": "???",
           "name": "Szilágyi Katalin",
+          "about": "Bemutatkozás"
+        },
+        {
+          "src": "images/Team.png",
+          "description": "???",
+          "name": "Tóth Róbert",
           "about": "Bemutatkozás"
         }
 		

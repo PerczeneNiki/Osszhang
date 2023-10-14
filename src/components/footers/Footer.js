@@ -36,8 +36,8 @@ const Column = tw.div`px-4 sm:px-0 sm:w-1/4 md:w-auto mt-12`;
 const ColumnHeading = tw.h5`mb-6 uppercase font-bold text-primary-500`;
 
 const LinkList = tw.ul`mt-6 text-sm font-medium inline-block`;
-const LinkListItem = tw.li`mt-3`;
-const LinkItem = styled.a`
+const LinkListItem = tw.li`whitespace-nowrap mt-3`;
+const LinkItem = styled(Link)`
 ${tw`mt-4 sm:mt-0 sm:ml-8 flex items-center text-secondary-300 transition duration-300 hover:text-primary-400 `}
 }
 `;
@@ -73,8 +73,7 @@ const SocialLink = styled.a`
 
 function sendEmail(e){
   e.preventDefault();    //This is important, i'm not sure why, but the email won't send without it
-
-  emailjs.sendForm('service_gi12d6g', 'template_jafwo3o', e.target, 'm-8xebMSUuo6oS2sD')
+    emailjs.sendForm('service_gi12d6g', 'template_jafwo3o', e.target, 'm-8xebMSUuo6oS2sD')
     .then((result) => {
       console.log("sendemail");
         window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
@@ -90,6 +89,12 @@ export default () => {
   const [nameModal, setNameModal] = useState("");
   const [imgModal, setImgModal] = useState("");
   const [linkModal, setLinkModal] = useState("");
+  const [inputValue, setInputValue] = useState(''); 
+  const handleSubmit = () => { 
+    if (inputValue.length > 0) { 
+        alert("Form submitted with value: " + inputValue); 
+    } 
+}; 
 
   return (
     
@@ -190,8 +195,9 @@ export default () => {
                 Minden hónapban elküldjük Neked a következő hónap eseményeit és egyéb érdekes és hasznos információkat
               </SubscribeText>
               <SubscribeForm method="get" action="#" onSubmit={sendEmail}>
-                <Input type="email" name="from_email" placeholder="Email-cím" />
-                <SubscribeButton type="submit">Feliratkozás</SubscribeButton>
+                <Input type="email" name="from_email" placeholder="Email-cím" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+                <SubscribeButton onClick={handleSubmit} 
+                disabled={inputValue.length === 0} type="submit">Feliratkozás</SubscribeButton>
               </SubscribeForm>
             </SubscribeNewsletterContainer>
           </SubscribeNewsletterColumn>
