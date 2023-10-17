@@ -55,7 +55,6 @@ export default ({
 
 }) => {
   
-  console.log(reviews);
   return (
     <Container id={id}>
       <Content>

@@ -28,6 +28,8 @@ const PrimaryButton = styled(PrimaryButtonBase)(props => [
   props.buttonRounded && tw`rounded-full`
 ]);
 
+const MyLink=styled(Link)`m-1`;
+
 const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
   padding-bottom: 56.25% !important;
   padding-top: 0px !important;

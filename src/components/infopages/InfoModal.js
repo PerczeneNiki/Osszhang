@@ -31,9 +31,13 @@ img {
   ${tw`w-48 h-48`}
 }`;
 
-const Link = styled.button`
-${tw`mt-4 sm:mt-0 sm:ml-8 flex items-center text-secondary-300 transition duration-300 hover:text-primary-400 `}
-}
+const Link = tw.a`
+whitespace-nowrap
+inline-block
+mt-2
+  text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
+  font-semibold tracking-wide transition duration-300 text-primary-500
+  pb-1 border-b-2 border-transparent hover:border-primary-900 hocus:text-primary-900
 `;
 
 export default ({
@@ -50,8 +54,7 @@ export default ({
         <ImageContainer ><img src={image} alt="" css={imageCss} /></ImageContainer>        
           <Title>{heading}</Title>
           <HeadingDescription>{description}</HeadingDescription>
-          <Link href={link}>{link}</Link>
-          {console.log({link})}
+          <Link href={link}>További információk</Link>
         </HeadingInfoContainer>
       </Content>
       <DecoratorBlob1 />

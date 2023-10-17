@@ -4,7 +4,7 @@ import tw from "twin.macro";
 import styled from "styled-components"; //eslint-disable-line
 import  { MyHashLink, NavLinks} from "../components/header/light.js";
 import Footer from "components/footers/Footer.js";
-import Members from "components/features/Members.js";
+import ThreeActivities from "components/features/ThreeActivities.js";
 import YearlyPrograms from "components/features/YearlyPrograms.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import NavBar from "components/header/NavBar.js";
@@ -45,7 +45,7 @@ export default () => {
   return (
     <AnimationRevealPage>
       <NavBar id="ourworkpageNavbar" roundedHeaderButton={true} navLinks={navLinks}/>
-      <Members id="activities" heading="Tevékenységi köreink" linkText="Programok" cards={[
+      <ThreeActivities id="activities" heading="Tevékenységi köreink" linkText="Programok" cards={[
         {
           imageSrc: waitImage,
           title: "Várandósságra, szülésre készülve",

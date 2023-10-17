@@ -5,7 +5,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import NavBar from "components/header/NavBar.js";
-import  { NavLinks } from "../components/header/light.js";
+import  { MyHashLink, NavLinks } from "../components/header/light.js";
 
 import Footer from "components/footers/Footer.js";
 
@@ -25,7 +25,7 @@ import palyazat2 from "images/tamogatasok/civilalap.jpg";
 
 
 const HeadingRow = tw.div`flex`;
-const Heading = tw.h5`mb-6 uppercase font-bold text-primary-500`;
+const Heading = tw.h5`mt-6 mb-6 uppercase font-bold text-primary-500`;
 const Text = styled.div`
   ${tw`text-lg  text-gray-800`}
   p {
@@ -56,13 +56,22 @@ ${tw`mt-4 sm:mt-0 sm:ml-8 flex items-center text-secondary-300 transition durati
 }
 `;
 
+const SupportContainer = tw.img`mb-4 border-solid border-teal-500 border-2`;
+
 export default () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
   const navLinks = [
-    <NavLinks key={1}></NavLinks>
+    <NavLinks key={1}>
+      <MyHashLink smooth to="#yearlyreports">
+      Éves beszámolók
+      </MyHashLink>
+      <MyHashLink smooth to="#supports">
+        Támogatások
+      </MyHashLink>
+      </NavLinks>
   ];
   
   return (    
@@ -70,7 +79,7 @@ export default () => {
       <NavBar navLinks={navLinks} contactLink={null}/>
       <Container>
         <ContentWithPaddingXl>
-          <HeadingRow>
+          <HeadingRow id="yearlyreports">
             <Heading>Éves beszámolók</Heading>
           </HeadingRow>
           <Text>
@@ -107,8 +116,11 @@ export default () => {
             </p>
 
                       </Text>
-                      <img src={palyazat1} alt="NEA" width={400} />
-                      <img src={palyazat2} alt="civilalap" width={400} />
+                      <HeadingRow>
+            <Heading id="supports">Támogatások</Heading>
+          </HeadingRow>
+                              <SupportContainer src={palyazat1} alt="NEA" width={400} />
+                      <SupportContainer src={palyazat2} alt="civilalap" width={400} />
         </ContentWithPaddingXl>
       </Container>
       <Footer />

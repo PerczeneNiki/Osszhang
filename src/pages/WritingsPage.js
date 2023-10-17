@@ -3,7 +3,7 @@ import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import NavBar from "components/header/NavBar.js";
-import  { NavLinks } from "../components/header/light.js";
+import  { MyHashLink, NavLinks } from "../components/header/light.js";
 import FAQ from "components/features/FAQ.js";
 
 
@@ -20,7 +20,11 @@ export default () => {
 
 
   const navLinks = [
-    <NavLinks key={1}></NavLinks>
+    <NavLinks key={1}>
+      <MyHashLink smooth to="#writings">
+      Várakozásról, szülésről, születésről
+      </MyHashLink>
+      </NavLinks>
   ];
   
   return (    
@@ -28,7 +32,7 @@ export default () => {
       <NavBar navLinks={navLinks} contactLink={null}/>
       <Container>
         <ContentWithPaddingXl>
-        <FAQ 
+        <FAQ id="writings"
         subheading="Régi írások az Egyesület alapítóinak tollából."
         heading={<>Várakozásról, szülésről, születésről</>}
         description=""

@@ -40,10 +40,8 @@ function sendEmail(e){
 
   emailjs.sendForm('service_gi12d6g', 'template_mfytcis', e.target, 'm-8xebMSUuo6oS2sD')
     .then((result) => {
-      console.log("sendemail");
         window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
     }, (error) => {
-        console.log(error.text);
     });
 }
 

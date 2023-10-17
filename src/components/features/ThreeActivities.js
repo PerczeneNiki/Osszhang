@@ -83,6 +83,7 @@ export default ({id="",
   const [contentModal, setContentModal] = useState("");
   const [nameModal, setNameModal] = useState("");
   const [imgModal, setImgModal] = useState("");
+  
   return (
     
     <Container id={id}>
@@ -91,11 +92,11 @@ export default ({id="",
         {heading && <Heading>{heading}</Heading>}
         {description && <Description>{description}</Description>}
         <ThreeColumnContainer>
-          {cards[0].map((card, i) => (
+          {cards.map((card, i) => (
             <Column key={i}>
               { <Card onClick={() => {setShowModal(true); setNameModal(card.title);setContentModal(card.about);setImgModal(card.imageSrc)}}>
                 <span className="imageContainer" css={imageContainerCss}>
-                  <img src={card.imageSrc} alt="hiba" css={imageCss} /> 
+                  <img src={card.imageSrc} alt="hiba" css={imageCss} />
                 </span>
                 <span className="title">{card.title}</span>
                 <p className="description">{card.description}</p>
@@ -119,7 +120,7 @@ export default ({id="",
           onRequestClose={() =>setShowModal(false)} show={showModal} content={contentModal}
         >          
           <div className="content">
-          <InfoModal id="abouts" heading= {nameModal} image={imgModal} description={contentModal}/>
+          <InfoModal id="abouts" heading= {nameModal} image={imgModal} description={contentModal} link={"https://www.facebook.com/OsszhangEgyesulet/events"}/>
           </div>
         </StyledModal>
     </Container>

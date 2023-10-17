@@ -29,29 +29,31 @@ const StyledModal = styled(ReactModalAdapter)`
 
 const Container = tw.div`relative bg-gray-200 text-gray-700 -mb-8 -mx-8 px-8 py-20 lg:py-24`;
 const Content = tw.div`max-w-screen-xl mx-auto relative z-10`;
-const SixColumns = tw.div`flex flex-wrap text-center sm:text-left justify-center sm:justify-start md:justify-between -mt-12`;
+const ThreeColumns = tw.div`columns-1 flex-wrap flex xl:flex-nowrap lg:columns-2 xl:columns-3 text-center justify-center -mt-12`;
+const TwoColumns = tw.div`px-4 sm:px-0 mt-12`;
+const LeftColumn = tw.div`px-4 sm:px-0 mt-12 sm:mr-4`;
+const RightColumn = tw.div`px-4 sm:px-0 mt-12 sm:ml-4`;
 
-const Column = tw.div`px-4 sm:px-0 sm:w-1/4 md:w-auto mt-12`;
+
 
 const ColumnHeading = tw.h5`mb-6 uppercase font-bold text-primary-500`;
-
-const LinkList = tw.ul`mt-6 text-sm font-medium inline-block`;
-const LinkListItem = tw.li`whitespace-nowrap mt-3`;
+const LinkList = tw.div`inline-block sm:mt-10 text-sm font-medium columns-1 sm:columns-2 `;
+const LinkListItem = tw.div`whitespace-nowrap mb-3 text-center sm:text-left`;
 const LinkItem = styled(Link)`
-${tw`mt-4 sm:mt-0 sm:ml-8 flex items-center text-secondary-300 transition duration-300 hover:text-primary-400 `}
+${tw`mb-4 sm:mt-0   items-center text-secondary-300 transition duration-300 hover:text-primary-400 `}
 }
 `;
 const RouterLink = styled(Link)`
-${tw`mt-4 sm:mt-0 sm:ml-8 flex items-center text-secondary-300 transition duration-300 hover:text-primary-400 `}
+${tw`mt-4 sm:mt-0   items-center text-secondary-300 transition duration-300 hover:text-primary-400 `}
 }
 `;
 
-const SubscribeNewsletterColumn = tw(Column)`text-center lg:text-left w-full! lg:w-auto! mt-20 lg:mt-12`;
-const SubscribeNewsletterContainer = tw.div`max-w-sm mx-auto lg:mx-0 `;
+const SubscribeNewsletterColumn = tw(RightColumn)`mt-0 text-center w-full! lg:w-auto!`;
+const SubscribeNewsletterContainer = tw.div`max-w-sm`;
 const SubscribeText = tw.p`mt-2 text-sm font-medium text-gray-600`;
 const SubscribeForm = tw.form`mt-4 lg:mt-6 text-sm sm:flex max-w-xs sm:max-w-none mx-auto sm:mx-0`;
 const Input = tw.input`bg-gray-300 px-6 py-3 rounded sm:rounded-r-none border-2 sm:border-r-0 border-gray-400 hover:border-primary-500 focus:outline-none transition duration-300 w-full`;
-const SubscribeButton = tw(PrimaryButtonBase)`mt-4 sm:mt-0 w-full sm:w-auto rounded sm:rounded-l-none px-8 py-3`;
+const SubscribeButton = tw(PrimaryButtonBase)`mt-4 sm:mt-0 w-1/2 sm:w-auto rounded sm:rounded-l-none px-4 py-3`;
 
 const Divider = tw.div`my-16 border-b-2 border-gray-300 w-full`;
 
@@ -59,7 +61,7 @@ const ThreeColRow = tw.div`flex flex-col md:flex-row items-center justify-betwee
 
 const LogoContainer = tw.div`flex items-center justify-center md:justify-start`;
 const LogoImg = tw.img`w-8`;
-const LogoText = tw.h5`ml-2 text-xl font-black tracking-wider text-gray-800`;
+const LogoText = tw.h5`ml-2 text-xl font-black tracking-wider text-primary-500`;
 
 const CopywrightNotice = tw.p`text-center text-sm sm:text-base mt-8 md:mt-0 font-medium text-gray-500`;
 
@@ -75,10 +77,8 @@ function sendEmail(e){
   e.preventDefault();    //This is important, i'm not sure why, but the email won't send without it
     emailjs.sendForm('service_gi12d6g', 'template_jafwo3o', e.target, 'm-8xebMSUuo6oS2sD')
     .then((result) => {
-      console.log("sendemail");
         window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
     }, (error) => {
-        console.log(error.text);
     });
 }
 
@@ -96,16 +96,30 @@ export default () => {
     } 
 }; 
 
+const dinamiclist = {
+  // Adding media query..
+  '@media (min-width: 800px)': {
+    columns: 2,
+  },
+  '@media (min-width: 600px)': {
+    columns: 1,
+  },
+};
+
   return (
     
     <Container>
       <Content>
-        <SixColumns>
-        <Column>
+       
+      <ThreeColumns id="threeColumns">
+          
+      <LeftColumn id="mapColumn" class="basis-1/4">
         <iframe title="osszhangLocation" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d668.6931652133547!2d20.370875654341976!3d47.902085323399994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47408d95e5c64b8d%3A0x1149b456b140b2d8!2zw5Zzc3poYW5nIEVneWVzw7xsZXQ!5e0!3m2!1shu!2shu!4v1693346325093!5m2!1shu!2shu" width="300" height="200" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-          </Column>
-          <Column>
-            <LinkList>
+          </LeftColumn>
+          
+          
+          <TwoColumns id="linksColumn" class="basis-1/2">
+            <LinkList >
               <LinkListItem>
                 <LinkItem href = {ADATKEZELESI} target = "_blank">Adatvédelmi tájékoztató</LinkItem>
               </LinkListItem>
@@ -141,10 +155,6 @@ export default () => {
                     }
                   ])}}>Támogatóink</LinkItem>
               </LinkListItem>
-            </LinkList>
-          </Column>
-          <Column>
-            <LinkList>
               <LinkListItem>
                 <LinkItem onClick={()=>{
                   setOpenedModal(1); 
@@ -186,10 +196,12 @@ export default () => {
                 <RouterLink to="/writings">Várakozásról, szülésről, születésről</RouterLink>
               </LinkListItem>
             </LinkList>
-          </Column>
+          </TwoColumns>
+         
           
-          <SubscribeNewsletterColumn>
-            <SubscribeNewsletterContainer>
+          <RightColumn id="newsletterColumn" class="basis-1/4">
+          <SubscribeNewsletterColumn id="column">
+            <SubscribeNewsletterContainer id="container">
               <ColumnHeading>Iratkozz fel programértesítő leveleinkre</ColumnHeading>
               <SubscribeText>
                 Minden hónapban elküldjük Neked a következő hónap eseményeit és egyéb érdekes és hasznos információkat
@@ -201,7 +213,8 @@ export default () => {
               </SubscribeForm>
             </SubscribeNewsletterContainer>
           </SubscribeNewsletterColumn>
-        </SixColumns>
+          </RightColumn>
+        </ThreeColumns>
         <Divider />
         <ThreeColRow>
           <LogoContainer>
@@ -250,4 +263,4 @@ export default () => {
       
     </Container>
   );
-  };
+                };
