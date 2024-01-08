@@ -28,19 +28,20 @@ export default () => {
       <PerinatFuzet></PerinatFuzet>
       <OnePercent subheading={<Subheading>egyszázalék</Subheading>} 
         heading={<> Hálásan köszönjük, ha támogatsz <HighlightedText>1%-oddal.</HighlightedText></>}
+        description="A magyar adótörvények lehetőséget teremtenek arra, hogy magánszemélyként rendelkezz a személyi jövedelemadód 1 %-áról és azt az általad támogatni kívánt civil szervezetnek felajánld."
         imageSrc={onepercent}
         showDecoratorBlob={false}
         features={[
           {
             Icon: MoneyIcon,
-            title: "Közhasznú",
-            description: "Egyesületünknek nagy segítség, ha egy százalékoddal támogatsz Minket.",
+            title: "Miért mi?",
+            description: "Az Összhang Egyesület egy vallásilag és politikailag független perinatális időszakot támogató szervezet.SORTORES Azért dolgozunk, hogy a családok méltó módon élhessék meg ezt az érzékeny időszakot.",
             iconContainerCss: tw`bg-green-300 text-green-800`
           },
           {
             Icon: BriefcaseIcon,
-            title: "Lorem ipsum",
-            description: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
+            title: "Adószámunk",
+            description: "18010592-1-10 SORTORES Az 1% támogatás számodra csak néhány kattintás, számunkra viszont hatalmas segítség.",
             iconContainerCss: tw`bg-red-300 text-red-800`
           }
         ]} />

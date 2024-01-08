@@ -95,17 +95,6 @@ export default () => {
         alert("Form submitted with value: " + inputValue); 
     } 
 }; 
-
-const dinamiclist = {
-  // Adding media query..
-  '@media (min-width: 800px)': {
-    columns: 2,
-  },
-  '@media (min-width: 600px)': {
-    columns: 1,
-  },
-};
-
   return (
     
     <Container>

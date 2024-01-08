@@ -14,7 +14,7 @@ const Subheading = tw(SubheadingBase)`mb-4 text-center`;
 const Heading = tw(SectionHeading)`w-full`;
 const Description = tw(SectionDescription)`w-full text-center`;
 
-const Column = tw.div`flex flex-col items-center`;
+const Column = tw.div`flex flex-col items-center mt-16`;
 const HeaderContent = tw.div``;
 
 const FAQSContainer = tw.dl`mt-12 max-w-4xl relative`;

@@ -9,7 +9,7 @@ import ResponsiveVideoEmbed from "../../helpers/ResponsiveVideoEmbed.js";
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
-const RightColumn = tw.div`w-full sm:w-5/6 lg:w-1/2 mt-16 lg:mt-0 lg:pl-8`;
+const RightColumn = tw.div`w-full sm:w-5/6 lg:w-1/2 lg:mt-0 lg:pl-8`;
 const TextColumn = styled(Column)(props => [
   tw`md:w-6/12 mt-16 md:mt-0`,
   props.textOnLeft ? tw`md:mr-12 lg:mr-16 md:order-first` : tw`md:ml-12 lg:ml-16 md:order-last`
@@ -28,7 +28,6 @@ const PrimaryButton = styled(PrimaryButtonBase)(props => [
   props.buttonRounded && tw`rounded-full`
 ]);
 
-const MyLink=styled(Link)`m-1`;
 
 const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
   padding-bottom: 56.25% !important;
