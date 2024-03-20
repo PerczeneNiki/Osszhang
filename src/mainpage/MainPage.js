@@ -10,9 +10,9 @@ import FAQ from "components/features/FAQ.js";
 import Footer from "components/footers/Footer.js";
 import OnePercent from "components/features/OnePercent.js";
 import PerinatFuzet from "components/features/PerinatFuzet";
+import InfoEmail from "components/features/InfoEmail"
 import onepercent from "images/egyszazalek.jpg";
-import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
-import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
+import { ReactComponent as HeartIcon } from "feather-icons/dist/icons/heart.svg";
 
 export default () => {
   const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
@@ -26,6 +26,7 @@ export default () => {
       <AboutUs subheading={<Subheading>Rólunk</Subheading>} />
       <Activities subheading={<Subheading>Tevékenységeink</Subheading>} heading={<> Szeretettel várunk. </>} />
       <PerinatFuzet></PerinatFuzet>
+      <InfoEmail></InfoEmail>
       <OnePercent subheading={<Subheading>egyszázalék</Subheading>} 
         heading={<> Hálásan köszönjük, ha támogatsz <HighlightedText>1%-oddal.</HighlightedText></>}
         description="A magyar adótörvények lehetőséget teremtenek arra, hogy magánszemélyként rendelkezz a személyi jövedelemadód 1 %-áról és azt az általad támogatni kívánt civil szervezetnek felajánld."
@@ -33,16 +34,16 @@ export default () => {
         showDecoratorBlob={false}
         features={[
           {
-            Icon: MoneyIcon,
+            Icon: HeartIcon,
             title: "Miért mi?",
             description: "Az Összhang Egyesület egy vallásilag és politikailag független perinatális időszakot támogató szervezet.SORTORES Azért dolgozunk, hogy a családok méltó módon élhessék meg ezt az érzékeny időszakot.",
-            iconContainerCss: tw`bg-green-300 text-green-800`
+            iconContainerCss: tw`bg-teal-300 text-teal-800`
           },
           {
-            Icon: BriefcaseIcon,
+            Icon: HeartIcon,
             title: "Adószámunk",
             description: "18010592-1-10 SORTORES Az 1% támogatás számodra csak néhány kattintás, számunkra viszont hatalmas segítség.",
-            iconContainerCss: tw`bg-red-300 text-red-800`
+            iconContainerCss: tw`bg-teal-300 text-teal-800`
           }
         ]} />
       <FAQ subheading={<Subheading>GYIK</Subheading>}
@@ -63,7 +64,7 @@ export default () => {
           },
           {
             question: "Hogyan lehetek Egyesületi tag?",
-            answer: "Egyesületi tagsági díjat minden évben adott tárgyévre lehet befizetni, ennek díja jelenleg 5000 Ft."
+            answer: "Egyesületi tagsági díjat minden évben adott tárgyévre lehet befizetni, ennek díja jelenleg 6000 Ft."
           },
           {
             question: "Kell jelentkeznem az eseményekre, ha részt szeretnék venni?",

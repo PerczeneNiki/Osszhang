@@ -118,7 +118,7 @@ export default () => {
               <LinkListItem>
                 <RouterLink to="/reports">Beszámolók, támogatások</RouterLink>
               </LinkListItem>
-              <LinkListItem>
+              {/*<LinkListItem>
                 <LinkItem onClick={()=>{
                   setOpenedModal(1); 
                   setNameModal("Támogatóink"); 
@@ -169,7 +169,7 @@ export default () => {
                       customerTitle: "Founder, EventsNYC"
                     }
                   ])}}>Társszervezetek</LinkItem>
-              </LinkListItem>
+                </LinkListItem>*/}
               <LinkListItem>
                 <LinkItem href="https://www.facebook.com/OsszhangEgyesulet/events">Programjaink, szolgáltatásaink</LinkItem>
               </LinkListItem>

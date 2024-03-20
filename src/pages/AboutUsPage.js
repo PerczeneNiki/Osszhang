@@ -90,12 +90,6 @@ export default () => {
             title: "Mottó",
             description: "„…napjaink erőszakos világának békéssé formálásához legelőször azt kell megváltoztatnunk, ahogy gyermekeinkkel bánunk, mégpedig életük legelső pillanatától kezdve.” (Thomas Verny)",
             iconContainerCss: tw`bg-teal-300 text-teal-800`
-          },
-          {
-            Icon: HeartIcon,
-            title: "Affordable",
-            description: "valami",
-            iconContainerCss: tw`bg-red-300 text-red-800`
           }
         ]}
       />
@@ -127,7 +121,7 @@ export default () => {
       <Starts id="goals"
         subheading={<Subheading>Kezdetek</Subheading>}
         heading="Céljaink"
-        description="Célunk még, hogy támogassuk a családokat intellektuálisan és érzelmileg a megváltozott élethelyzethez való alkalmazkodásban, támogatást nyújtsunk számukra a mindennapokban.
+        description="Célunk, hogy támogassuk a családokat intellektuálisan és érzelmileg a megváltozott élethelyzethez való alkalmazkodásban, támogatást nyújtsunk számukra a mindennapokban.
         Tevékenységi körünk változik, bővül a gyerekek növekedésével, igényeivel, szükségleteivel."
         buttonRounded={false}
         primaryButtonText="Bővebben"
@@ -135,13 +129,13 @@ export default () => {
         features = {[
           {
             Icon: HeartIcon,
-            title: "Professionalism",
-            description: "Célunk, hogy tevékenységünkkel hozzájáruljunk az optimális életkezdet általános gyakorlattá tételéhez szükséges szemléletváltáshoz.",
+            title: "Optimális életkezdet",
+            description: "Szeretnénk, ha az optimális életkezdet általános gyakorlattá válna és megtörténne az ehhez szükséges szemléletváltás.",
             iconContainerCss: tw`bg-teal-300 text-teal-800`
           },
           {
             Icon: HeartIcon,
-            title: "Affordable",
+            title: "Boldog gyermekkor",
             description: "Célunk továbbá, hogy támogassuk a családokat abban, hogy „elég” boldog gyermekeket neveljenek, s ehhez nekik is csupán „elég” boldognak kell lenniük.",
             iconContainerCss: tw`bg-red-300 text-red-800`
           }

@@ -1,101 +1,82 @@
 {
-	"items": [
-		{
-			"src": "images/Ilike.png",
-			"description": "Az Egyesület elnöke, perinatális szaktanácsadó, okleveles jógaoktató",
-			"name": "Feithné Krajcsik Ilona",
-			"about": "2000-ben léptem a jóga útjára. Több tanfolyamot végeztem, aztán 2009-ben a Himalájai jóga tradició 3 éves iskolája elvégzésével nemzetközi jógaoktatói oklevelet kaptam. Közben már elvégeztem a Birthligt kimama, baba-mama jógaoktatói tanfolyamait.  Ugyanebben az évben végeztem az ELTE perinatális szaktanacsadó szakán. Két felnőtt gyermekem van. Két unokám. 2009-ben megalapítottuk az Összhang Közhasznú Egyesületet. Azóta vagyok az elnöke."
-		},
-		{
-			"src": "images/Kati.png",
-			"description": "mentálhigiénés segítő szakember, transzperszonális terapeuta",
-			"name": "Tolnai Katalin",
-			"about": "A lelki egészség helyreállításában segítem a hozzám fordulókat. Egyéni és csoportos folyamatokat kísérek. A perinatális témához anyaságom élménye vezetett. Tagja vagyok az Orosz Katalin klinikai pszichológus irányításával működő Születés Kísérleti Műhelynek. Az ő módszerén alapuló Születni - Újjászületni csoportokban dolgozva sok tapasztalatot és tudást szereztem a születés életre gyakorolt hatásáról. Ez az élmény motiválja a munkámat."
-		},
-		{
-          "src": "images/Judit.png",
-          "description": "SZPT játékmester, gyógypedagógus-logopédus, óvodapedagógus",
-          "name": "Bereczné Dobos Judit",
-          "about": "gyógypedagógus, logopédus tanár terapeuta, SZPT játékmester"
-        },
-        {
-          "src": "images/Zsofi.png",
-          "description": "baba-, és gyermekhordozási tanácsadó, dúla",
-          "name": "Holló Zsófia",
-          "about": "Gyermekeim születése indított el az úton, melynek során küldetéssé érett bennem a gyermekàgyas időszakhoz kapcsolódó hiteles információk átadása, a felkèszítőimen a gyakorlati túlèlőpraktikàkon a túl a lehetséges nehézségekről és ezek élettani hátteréről is mesèlek. Másik szívügyem az evolúciós gyermeknevelés és a babahordozás nèpszerűsítése, valamint a családok támogatása hordozási tanácsadóként. Keress bizalommal!"
-        },
-        {
-          "src": "images/Niki.png",
-          "description": "tanár, képzésben lévő női kör vezető",
-          "name": "Perczéné Menyhárt Nikolett",
-          "about": "Bemutatkozás"
-        },
-        {
-          "src": "images/Patti.png",
-          "description": "dúla, gyermekágyas segítő",
-          "name": "Fehérné Nagy Patricia",
-          "about": "Bemutatkozás"
-        },
-        {
-          "src": "images/Luca.png",
-          "description": "gyermekágyas segítő, önkéntes szoptatástámogató, hordozási tanácsadó",
-          "name": "Mezei Luca",
-          "about": "Bemutatkozás"
-        },
-        {
-          "src": "images/Reka.png",
-          "description": "hordozási tanácsadó, gyógypedagógus",
-          "name": "Oláh-Kristóf Réka",
-          "about": "Bemutatkozás"
-        },
-        {
-          "src": "images/Ildi.png",
-          "description": "dúla",
-          "name": "Tóth Ildi",
-          "about": "Bemutatkozás"
-        },
-        {
-          "src": "images/Bea.png",
-          "description": "???",
-          "name": "Bakondi Beatrix",
-          "about": "Bemutatkozás"
-        },
-        {
-          "src": "images/VIldi.png",
-          "description": "???",
-          "name": "Szakácsné Veszprémi Ildi",
-          "about": "Bemutatkozás"
-        },
-        {
-          "src": "images/Szandra.png",
-          "description": "integrál önismereti tanácsadó, bodywork csoportvezető, családállító, dúla",
-          "name": "Veréb Szandra",
-          "about": "Bemutatkozás"
-        },
-        {
-          "src": "images/Team.png",
-          "description": "klinikai szakpszichológus",
-          "name": "Alagyi-Kása Fanni",
-          "about": "Bemutatkozás"
-        },
-        {
-          "src": "images/Team.png",
-          "description": "pszichológus, perinatális szaktanácsadó",
-          "name": "Héjja-Nagy Katalin",
-          "about": "Bemutatkozás"
-        },
-        {
-          "src": "images/Team.png",
-          "description": "???",
-          "name": "Szilágyi Katalin",
-          "about": "Bemutatkozás"
-        },
-        {
-          "src": "images/Team.png",
-          "description": "???",
-          "name": "Tóth Róbert",
-          "about": "Bemutatkozás"
-        }
-		
-	]
+  "items": [
+    {
+      "src": "images/Ilike.png",
+      "description": "Az Egyesület elnöke, perinatális szaktanácsadó, okleveles jógaoktató",
+      "name": "Feithné Krajcsik Ilona",
+      "about": "2000-ben léptem a jóga útjára. Több tanfolyamot végeztem, aztán 2009-ben a Himalájai jóga tradició 3 éves iskolája elvégzésével nemzetközi jógaoktatói oklevelet kaptam. Közben már elvégeztem a Birthligt kimama, baba-mama jógaoktatói tanfolyamait.  Ugyanebben az évben végeztem az ELTE perinatális szaktanacsadó szakán. Két felnőtt gyermekem van. Két unokám. 2009-ben megalapítottuk az Összhang Közhasznú Egyesületet. Azóta vagyok az elnöke."
+    },
+    {
+      "src": "images/Kati.png",
+      "description": "mentálhigiénés segítő szakember, transzperszonális terapeuta",
+      "name": "Tolnai Katalin",
+      "about": "A lelki egészség helyreállításában segítem a hozzám fordulókat. Egyéni és csoportos folyamatokat kísérek. A perinatális témához anyaságom élménye vezetett. Tagja vagyok az Orosz Katalin klinikai pszichológus irányításával működő Születés Kísérleti Műhelynek. Az ő módszerén alapuló Születni - Újjászületni csoportokban dolgozva sok tapasztalatot és tudást szereztem a születés életre gyakorolt hatásáról. Ez az élmény motiválja a munkámat."
+    },
+    {
+      "src": "images/Judit.png",
+      "description": "SZPT játékmester, gyógypedagógus-logopédus, óvodapedagógus",
+      "name": "Bereczné Dobos Judit",
+      "about": "gyógypedagógus, logopédus tanár terapeuta, SZPT játékmester"
+    },
+    {
+      "src": "images/Zsofi.png",
+      "description": "baba-, és gyermekhordozási tanácsadó, dúla",
+      "name": "Holló Zsófia",
+      "about": "Gyermekeim születése indított el az úton, melynek során küldetéssé érett bennem a gyermekàgyas időszakhoz kapcsolódó hiteles információk átadása, a felkèszítőimen a gyakorlati túlèlőpraktikàkon a túl a lehetséges nehézségekről és ezek élettani hátteréről is mesèlek. Másik szívügyem az evolúciós gyermeknevelés és a babahordozás nèpszerűsítése, valamint a családok támogatása hordozási tanácsadóként. Keress bizalommal!"
+    },
+    {
+      "src": "images/Niki.png",
+      "description": "programozó, tanár, képzésben lévő női kör vezető",
+      "name": "Perczéné Menyhárt Nikolett",
+      "about": "Első várandósságom idején kapcsolódtam először az Összhanghoz, aztán itt ragadtam. Bár az én végzettségeim nem kapcsolódnak a perinatális területhez, önkéntes munkámmal igyekszem segíteni, hogy az Egyesület minél több anyához eljusson, ezáltal sokak élhessék meg olyan támogató közegben a szülés/születés/gyermekágy időszakát, ahogy én is megtapasztalhattam. Javarészt háttérben dolgozom az Összhangban, személyesen az Összhang Klubokon, illetve időnként a Szülőcsoportokon találkozhatsz velem."
+    },
+    {
+      "src": "images/Luca.png",
+      "description": "gyermekágyas segítő, önkéntes szoptatástámogató, hordozási tanácsadó",
+      "name": "Mezei Luca",
+      "about": "Két gyermekes édesanya vagyok, s az ő születésükkel összefüggésben tapasztaltam meg, hogy mekkora jelentősége van, ha az édesanyák, családok mellett olyan szakemberek állnak, akik hiteles, naprakész információkat adnak át, támogatják őket a családjuknak legmegfelelőbb úton. Minden ismeretemmel és tapasztalatommal én is ezt igyekszem erősíteni, megkereshető vagyok minden babahordozással, szoptatással, illetve gyermekágyas témával kapcsolatban."
+    },
+    {
+      "src": "images/Reka.png",
+      "description": "hordozási tanácsadó, gyógypedagógus",
+      "name": "Oláh-Kristóf Réka",
+      "about": "Anya vagyok, feleség, gyógypedagógus, hordozási tanácsadó, nemzetközi babamasszázs oktató, önkéntes szoptatási segítő. Minden minőségemben babákkal, kisebb és nagyobb gyermekekkel foglalkozom. Első várandósságom alatt (2019) kapcsolódtam először az Összhang Egyesülettel. Rengeteg szemléletformáló információt és figyelmet kaptam akkor, és kapok azóta is - 2023 tavasza óta már önkéntesként - egy megtartó közösségben. Találkozhatsz velem az egyesület által szervezett programokon, eseményeken, illetve egyénileg is állok rendelkezésedre."
+    },
+    {
+      "src": "images/Kriszti.png",
+      "description": "hordozási tanácsadó",
+      "name": "Rawlinson Krisztina",
+      "about": "Egy alapvetően spirituális beállítottságú és végtelenül pozitív nő vagyok. Két gyermekemet egyedül nevelő édesanya, angol-magyar szakos tanár. Elkötelezett vagyok a környezetvédelem iránt. 2020-ban lettem hordozási tanácsadó. Női körvezető képzést és dúlaképzést fogok elvégezni a jövőben. Érdekel az aromaterápia és az illóolajok világa, ebben az irányban is tervezem a tudásom elmélyítését."
+    },
+    {
+      "src": "images/Szandra.png",
+      "description": "integrál önismereti tanácsadó, bodywork csoportvezető, családállító, dúla",
+      "name": "Veréb Szandra",
+      "about": "Bemutatkozás"
+    },
+    {
+      "src": "images/Fanni.png",
+      "description": "klinikai szakpszichológus",
+      "name": "Alagyi-Kása Fanni",
+      "about": "Pszichológiai tanulmányaimat 2006-ban kezdtem meg a Debreceni Egyetemen. A mesterképzést a Károli Gáspár Református Egyetemen végeztem, majd a szakképzést a Pécsi Tudományegyetemen teljesítettem. Időközben elvégeztem a C. G. Jung Komplex-pszichoterápiás Egyesület elméleti képzését. Gyakorlati tapasztalatot pedagógiai szakszolgálati munkában szereztem. Anyává válásom óta célkitűzésem, hogy a gyermekre várókat és a kisgyermekes szülőket segítsem."
+    },
+    {
+      "src": "images/Kata.png",
+      "description": "pszichológus, perinatális szaktanácsadó",
+      "name": "Héjja-Nagy Katalin",
+      "about": "2000-ben végeztem a Debreceni Egyetemen pszichológus, pszichológia szakos tanár , angol szakfordító szakon. 2014-ben elvégeztem az ELTE perinatális szaktanácsadó képzését. Pszichodráma, hipnózis és relaxáció módszereiben képződtem, képződök. A Debreceni Egyetem Pszichológiai Intézetében oktatok pszichológus hallgatókat. Tanácsadó munkámban leginkább a perinatális problémák feldolgozásában segítek. Két kamasz fiú édesanyja vagyok."
+    },
+    {
+      "src": "images/Team.png",
+      "description": "???",
+      "name": "Szilágyi Katalin",
+      "about": "Bemutatkozás"
+    },
+    {
+      "src": "images/Team.png",
+      "description": "???",
+      "name": "Gyetvai-Girhiny Eszter",
+      "about": "Bemutatkozás"
+    }
+  ]
 }
