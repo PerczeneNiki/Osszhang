@@ -51,7 +51,7 @@ function sendEmail(e){
     });
 }
 
-export default ({id="contactUs"}) => {
+export default ({id="infoemail"}) => {
   
   return (
     <Container id={id}>

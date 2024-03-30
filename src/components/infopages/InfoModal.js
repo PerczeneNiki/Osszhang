@@ -15,7 +15,7 @@ const Title = tw(
   HeadingTitle
 )`text-primary-500`;
 const HeadingInfoContainer = tw.div`flex flex-col items-center`;
-const HeadingDescription = tw.p`mt-4 font-medium text-gray-600 text-center max-w-md`;
+const HeadingDescription = tw.p`mt-4 font-medium text-gray-600 text-center max-w-4xl`;
 
 
 const DecoratorBlob1 = tw(
@@ -54,7 +54,6 @@ export default ({
         <ImageContainer ><img src={image} alt="" css={imageCss} /></ImageContainer>        
           <Title>{heading}</Title>
           <HeadingDescription>{description}</HeadingDescription>
-          <Link href={link}>További információk</Link>
         </HeadingInfoContainer>
       </Content>
       <DecoratorBlob1 />

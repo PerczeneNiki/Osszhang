@@ -4,7 +4,7 @@ import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { SectionDescription } from "components/misc/Typography.js";
-import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
+import { Container } from "components/misc/Layouts.js";
 import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
 import IlikeImage from "images/Ilike.png";
 import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
@@ -52,10 +52,10 @@ const StyledModal = styled(ReactModalAdapter)`
     ${tw`fixed inset-0 z-50 ` }
   }
   &.mainHeroModal__content {
-    ${tw`xl:mx-auto m-4 sm:m-16 max-w-screen-md inset-0 flex inset-0 items-center rounded-xl bg-gray-300 border-2 border-primary-500 outline-none`}
+    ${tw`sm:mx-auto m-4 sm:m-16 max-w-screen-md flex inset-0 items-center rounded-xl bg-gray-300 border-2 border-primary-500 outline-none`}
   }
   .content {
-    ${tw`w-full lg:p-16`}
+    ${tw`w-full max-w-4xl`}
   }
 `;
 
@@ -85,8 +85,7 @@ export default ({id="",
   const [imgModal, setImgModal] = useState("");
   return (
     
-    <Container id={id}>
-      <ContentWithPaddingXl>
+    <Container id={id} class="nevjegy">
         {subheading && <Subheading>{subheading}</Subheading>}
         {heading && <Heading>{heading}</Heading>}
         {description && <Description>{description}</Description>}
@@ -109,7 +108,6 @@ export default ({id="",
             </Column>
           ))}
         </ThreeColumnContainer>
-      </ContentWithPaddingXl>
       <DecoratorBlob />
       <StyledModal
           closeTimeoutMS={300}

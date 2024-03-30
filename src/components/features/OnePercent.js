@@ -5,8 +5,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import TeamIllustrationSrc from "images/team-illustration.svg";
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
-import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
-import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
+import { ReactComponent as HeartIcon } from "feather-icons/dist/icons/heart.svg";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto  md:py-24 items-center`;
@@ -80,16 +79,16 @@ export default ({id="onepercent",
 }) => {
   const defaultFeatures = [
     {
-      Icon: BriefcaseIcon,
+      Icon: HeartIcon,
       title: "Professionalism",
       description: "We have the best professional marketing people across the globe just to work with you.",
       iconContainerCss: tw`bg-teal-300 text-teal-800`
     },
     {
-      Icon: MoneyIcon,
+      Icon: HeartIcon,
       title: "Affordable",
       description: "We promise to offer you the best rate we can - at par with the industry standard.",
-      iconContainerCss: tw`bg-red-300 text-red-800`
+      iconContainerCss: tw`bg-teal-300 text-teal-800`
     }
   ];
 
@@ -108,21 +107,36 @@ export default ({id="onepercent",
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
             <Features>
-              {features.map((feature, index) => (
-                <Feature key={index}>
+              
+            <Feature key="why">
                   <FeatureHeadingContainer>
                     <FeatureIconContainer
                       iconFilled={iconFilled}
                       iconRoundedFull={iconRoundedFull}
-                      css={feature.iconContainerCss || iconContainerCss}
+                      css={iconContainerCss}
                     >
-                      {<feature.Icon />}
+                      {<HeartIcon/>}
                     </FeatureIconContainer>
-                    <FeatureHeading>{feature.title}</FeatureHeading>
+                    <FeatureHeading>Miért mi?</FeatureHeading>
                   </FeatureHeadingContainer>
-                  <FeatureDescription>{feature.description}</FeatureDescription>
+                  <FeatureDescription>Az Összhang Egyesület egy vallásilag és politikailag független perinatális időszakot támogató szervezet.</FeatureDescription>
+                  <FeatureDescription>Azért dolgozunk, hogy a családok méltó módon élhessék meg ezt az érzékeny időszakot.</FeatureDescription>
                 </Feature>
-              ))}
+                <Feature key="number">
+                  <FeatureHeadingContainer>
+                    <FeatureIconContainer
+                      iconFilled={iconFilled}
+                      iconRoundedFull={iconRoundedFull}
+                      css={iconContainerCss}
+                    >
+                      {<HeartIcon/>}
+                    </FeatureIconContainer>
+                    <FeatureHeading>Adószámunk</FeatureHeading>
+                  </FeatureHeadingContainer>
+                  <FeatureDescription>18010592-1-10</FeatureDescription>
+                  <FeatureDescription>Az 1% támogatás számodra csak néhány kattintás, számunkra viszont hatalmas segítség.</FeatureDescription>
+                </Feature>
+              
             </Features>
 
             {/* <PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>

@@ -10,11 +10,6 @@ import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import NavBar from "components/header/NavBar.js";
 import ContactUsForm from "components/features/ContactUs.js";
 
-
-import waitImage from "images/waitfor.png";
-import withbaby from "images/withbaby.png";
-import perinatalsession from "images/perinatalsession.png";
-
 const PrimaryButton = styled(PrimaryButtonBase)(props => [
   tw`mt-0 md:mt-0 text-sm inline-block items-center mx-auto md:mx-0`,
   props.buttonRounded && tw`rounded-full`
@@ -45,27 +40,9 @@ export default () => {
   return (
     <AnimationRevealPage>
       <NavBar id="ourworkpageNavbar" roundedHeaderButton={true} navLinks={navLinks}/>
-      <ThreeActivities id="activities" heading="Tevékenységi köreink" linkText="Programok" cards={[
-        {
-          imageSrc: waitImage,
-          title: "Várandósságra, szülésre készülve",
-          description: "Már a várandósságra készülve is csatlakozhatsz foglalkozásainkra.",
-          about: "Beszélgetőkörök, női jóga, kismama jóga, Születés Hete",
-        },
-        {
-          imageSrc: withbaby,
-          title: "Kisbabával, kisgyermekkel",
-          description: "Sok programunkon találkozhatsz hasonló korú gyerekekkel és édesanyjukkal.",
-          about: "Hangicsáló, Babamasszázs, Összhang klub, Hordozós beszélgetőkör, Pelenkatapogató, Workshopok",
-        },
-        {
-          imageSrc: perinatalsession,
-          title: "A teljes perinatális időszakban és azon túl",
-          description: "Ha segítségre van szükséged, vagy csak beszélnél valakivel.",
-          about: "Pszichológus, perinatális szaktanácsadó, gyermekágyas segítők, önkéntes szoptatási segítőkállnak rendelkezésedre",
-        },]} />
+      <ThreeActivities id="activities" heading="Tevékenységi köreink" linkText="Programok"/>
       <ThreeColumnContainer>
-        <PrimaryButton buttonRounded={true} as="a" href={"https://www.facebook.com/OsszhangEgyesulet"}>
+        <PrimaryButton buttonRounded={true} as="a" href={"https://www.facebook.com/OsszhangEgyesulet/events"}>
           {"Aktuális információk a facebook oldalunkon."}
         </PrimaryButton>
       </ThreeColumnContainer>

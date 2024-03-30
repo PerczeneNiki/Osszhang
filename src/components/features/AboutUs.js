@@ -46,7 +46,7 @@ export default ({id="aboutus",
       Üdvözlünk az <span tw="text-primary-500">Összhang Egyesület</span> weboldalán!
     </>
   ),
-  description = "Célunk, hogy elősegítsük és támogassuk a szülés-születés-szoptatás humanizációját, valamint az anya és gyermeke közötti korai kötődés kialakulását. Szervezetünk szakmai háttérrel rendelkező, civil szervezet, amely számos programmal és tevékenységgel támogatja az édesanyákat és családokat az optimális életkezdet megvalósításában. Csatlakozz hozzánk, és légy részese egy összetartó közösségnek, amely segít a gyermekvállalás örömeiben és kihívásaiban!",
+  description = "Célunk, hogy elősegítsük és támogassuk a szülés-születés-szoptatás humanizációját, valamint az anya és gyermeke közötti korai kötődés kialakulását. Szervezetünk szakmai háttérrel rendelkező civil szervezet, amely számos programmal és tevékenységgel támogatja az édesanyákat és családokat az optimális életkezdet megvalósításában. Csatlakozz hozzánk, és légy részese egy összetartó közösségnek, amely segít a gyermekvállalás örömeiben és kihívásaiban!",
   primaryButtonText = "Tudj meg többet",
   primaryButtonUrl = "/#aboutUs",
   buttonRounded = true,

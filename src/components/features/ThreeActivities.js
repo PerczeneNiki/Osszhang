@@ -11,6 +11,9 @@ import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3
 import ReactModalAdapter from "../../helpers/ReactModalAdapter.js";
 import InfoModal from "components/infopages/InfoModal.js";
 
+import waitImage from "images/waitfor.png";
+import withbaby from "images/withbaby.png";
+import perinatalsession from "images/perinatalsession.png";
 
 const Heading = tw(SectionHeading)``;
 const Subheading = tw(SubheadingBase)`text-center mb-3`;
@@ -23,7 +26,7 @@ const Column = styled.div`
 `;
 
 const Card = styled.a`
-  ${tw`flex flex-col items-center text-center h-full mx-4 px-4 py-8 rounded transition-transform duration-300 hover:cursor-pointer transform hover:scale-105 `}
+  ${tw`flex flex-col items-center text-center h-full mx-4 px-4 py-8 rounded transition-transform duration-300  transform hover:scale-105 `}
   .imageContainer {
     ${tw`text-center`}
     img {
@@ -79,11 +82,7 @@ export default ({id="",
   imageContainerCss = null,
   imageCss = null
 }) => {
-  const [showModal, setShowModal] = useState(false);
-  const [contentModal, setContentModal] = useState("");
-  const [nameModal, setNameModal] = useState("");
-  const [imgModal, setImgModal] = useState("");
-  
+   
   return (
     
     <Container id={id}>
@@ -92,37 +91,58 @@ export default ({id="",
         {heading && <Heading>{heading}</Heading>}
         {description && <Description>{description}</Description>}
         <ThreeColumnContainer>
-          {cards.map((card, i) => (
-            <Column key={i}>
-              { <Card onClick={() => {setShowModal(true); setNameModal(card.title);setContentModal(card.about);setImgModal(card.imageSrc)}}>
+          
+            <Column key="wait">
+               <Card>
                 <span className="imageContainer" css={imageContainerCss}>
-                  <img src={card.imageSrc} alt="hiba" css={imageCss} />
+                  <img src={waitImage} alt="hiba" css={imageCss} />
                 </span>
-                <span className="title">{card.title}</span>
-                <p className="description">{card.description}</p>
-                {linkText && (
-                  <span className="link">
-                    <span>{linkText}</span>
-                    <ArrowRightIcon className="icon" />
-                  </span>
-                )}
-              </Card> }
+                <span className="title">Várandósságra, szülésre készülve</span>
+                <p className="description">Már a várandósságra készülve is csatlakozhatsz foglalkozásainkra:</p>
+                <p className="description">Születés Hete</p>
+                <p className="description">Beszélgetőkörök</p>
+                <p className="description">Női jóga</p>
+                <p className="description">Kismama jóga</p>
+                <p className="description">Babagondozás workshop</p>
+                <p className="description">Gyermekágyra hangolódó</p>
+                <p className="description">Szülésre-születésre hangolódó</p>                
+              </Card> 
             </Column>
-          ))}
+            <Column key="wait">
+               <Card>
+                <span className="imageContainer" css={imageContainerCss}>
+                  <img src={withbaby} alt="hiba" css={imageCss} />
+                </span>
+                <span className="title">Kisbabával, kisgyermekkel</span>
+                <p className="description">Sok programunkon találkozhatsz hasonló korú gyerekekkel és édesanyjukkal:</p>
+                <p className="description">Hangicsáló</p>
+                <p className="description">Babamasszázs</p>
+                <p className="description">Összhang klub</p>
+                <p className="description">Virágom Virága klub</p>
+                <p className="description">Hordozós beszélgetőkör</p>
+                <p className="description">Pelenkatapogató</p>
+                <p className="description">Workshopok</p>                
+              </Card> 
+            </Column>
+            <Column key="wait">
+               <Card>
+                <span className="imageContainer" css={imageContainerCss}>
+                  <img src={perinatalsession} alt="hiba" css={imageCss} />
+                </span>
+                <span className="title">A teljes perinatális időszakban és azon túl</span>
+                <p className="description">Ha segítségre van szükséged, vagy csak beszélnél valakivel, akkor is rendelkezésre állunk:</p>
+                <p className="description">Pszichológusok</p>
+                <p className="description">Perinatális szaktanácsadók</p>
+                <p className="description">Dúlák</p>
+                <p className="description">Gyermekágyas segítők</p>
+                <p className="description">Önkéntes szoptatási segítők</p>
+                <p className="description">Hordozási tanácsadók</p>                
+              </Card> 
+            </Column>
+         
         </ThreeColumnContainer>
       </ContentWithPaddingXl>
       <DecoratorBlob />
-      <StyledModal
-          closeTimeoutMS={300}
-          className="mainHeroModal"
-          isOpen={showModal === true}
-          shouldCloseOnOverlayClick={true}
-          onRequestClose={() =>setShowModal(false)} show={showModal} content={contentModal}
-        >          
-          <div className="content">
-          <InfoModal id="abouts" heading= {nameModal} image={imgModal} description={contentModal} link={"https://www.facebook.com/OsszhangEgyesulet/events"}/>
-          </div>
-        </StyledModal>
     </Container>
   );
 };

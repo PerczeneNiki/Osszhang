@@ -6,6 +6,7 @@ import HeaderImageAndText from "components/header/HeaderImageAndText.js";
 import AboutUs from "components/features/AboutUs.js";
 import Activities from "components/features/Activities.js";
 import ContactUsForm from "components/features/ContactUs.js";
+import Contact from "components/features/Contact.js";
 import FAQ from "components/features/FAQ.js";
 import Footer from "components/footers/Footer.js";
 import OnePercent from "components/features/OnePercent.js";
@@ -17,42 +18,29 @@ import { ReactComponent as HeartIcon } from "feather-icons/dist/icons/heart.svg"
 export default () => {
   const Subheading = tw.span`uppercase tracking-widest font-bold text-primary-500`;
   const HighlightedText = tw.span`text-primary-500`;
-  
+
 
   return (
     <AnimationRevealPage>
       <NavBar roundedHeaderButton={true} />
-      <HeaderImageAndText heading={<><HighlightedText>Összhangban </HighlightedText> a várandós és kisgyermekes édesanyák, családok szolgálatában.</> }/>
+      <HeaderImageAndText heading={<><HighlightedText>Összhangban </HighlightedText> a várandós és kisgyermekes édesanyák, családok szolgálatában.</>} />
       <AboutUs subheading={<Subheading>Rólunk</Subheading>} />
       <Activities subheading={<Subheading>Tevékenységeink</Subheading>} heading={<> Szeretettel várunk. </>} />
       <PerinatFuzet></PerinatFuzet>
       <InfoEmail></InfoEmail>
-      <OnePercent subheading={<Subheading>egyszázalék</Subheading>} 
+      <OnePercent subheading={<Subheading>egyszázalék</Subheading>}
         heading={<> Hálásan köszönjük, ha támogatsz <HighlightedText>1%-oddal.</HighlightedText></>}
         description="A magyar adótörvények lehetőséget teremtenek arra, hogy magánszemélyként rendelkezz a személyi jövedelemadód 1 %-áról és azt az általad támogatni kívánt civil szervezetnek felajánld."
         imageSrc={onepercent}
         showDecoratorBlob={false}
-        features={[
-          {
-            Icon: HeartIcon,
-            title: "Miért mi?",
-            description: "Az Összhang Egyesület egy vallásilag és politikailag független perinatális időszakot támogató szervezet.SORTORES Azért dolgozunk, hogy a családok méltó módon élhessék meg ezt az érzékeny időszakot.",
-            iconContainerCss: tw`bg-teal-300 text-teal-800`
-          },
-          {
-            Icon: HeartIcon,
-            title: "Adószámunk",
-            description: "18010592-1-10 SORTORES Az 1% támogatás számodra csak néhány kattintás, számunkra viszont hatalmas segítség.",
-            iconContainerCss: tw`bg-teal-300 text-teal-800`
-          }
-        ]} />
+        />
       <FAQ subheading={<Subheading>GYIK</Subheading>}
         heading={<>Van néhány <HighlightedText>kérdésed?</HighlightedText></>}
         description={<>Reméljük megtalálod a választ, ha mégsem, bátran írj nekünk!</>}
         faqs={[
           {
             question: "Hol található helyileg az Összhang Egyesület?",
-            answer:  "Az Egyesület székhelye Egerben, a Barkóczy utca 11. A. épület II/4. (22-es kapucsengő) alatt található."
+            answer: "Az Egyesület székhelye Egerben, a Barkóczy utca 11. A. épület II/4. (22-es kapucsengő) alatt található."
           },
           {
             question: "Minden program ugyanott kerül megrendezésre?",
@@ -67,6 +55,10 @@ export default () => {
             answer: "Egyesületi tagsági díjat minden évben adott tárgyévre lehet befizetni, ennek díja jelenleg 6000 Ft."
           },
           {
+            question: "Milyen eseményeken vehetek részt?",
+            answer: "Programjaink nagyrésze várandós és kisgyermekes családoknak szólnak, a facebook oldalunkon meghirdetett eseményekből kaphatsz pontos információkat."
+          },
+          {
             question: "Kell jelentkeznem az eseményekre, ha részt szeretnék venni?",
             answer: "Eseményeink egy részére szükséges előzetes jelentkezés, ezt mindig a facebook esemény leírásában jelezzük."
           },
@@ -75,10 +67,12 @@ export default () => {
             answer: "Igen, legtöbb programunkon részt vehetsz gyermekeddel, amennyiben egy esemény csak felnőtteknek szól, azt a leírásában jelezzük facebookon."
           }
         ]} />
-      <ContactUsForm/>
+
+      <Contact />
+      <ContactUsForm />
       <Footer />
-      
+
     </AnimationRevealPage>
-    
+
   );
-      }
+}
