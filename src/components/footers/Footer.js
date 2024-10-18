@@ -1,58 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import tw from "twin.macro";
 import styled from "styled-components";
-import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-import ReactModalAdapter from "../../helpers/ReactModalAdapter.js";
-import Supporters from "components/infopages/Supporters.js";
-import InfoModal from "components/infopages/InfoModal.js";
 import alapitoOkirat from "documents/AlapitoOkirat.pdf"
 import ADATKEZELESI from "documents/ADATKEZELESI.pdf"
 import emailjs from 'emailjs-com';
+import DOMPurify from "dompurify";
+import ReactHtmlParser from "react-html-parser";
+
 
 import LogoImage from "images/logo.png";
 import { ReactComponent as FacebookIcon } from "images/facebook-icon.svg";
 import { ReactComponent as InstaIcon } from "images/insta-icon.svg";
 import { ReactComponent as YoutubeIcon } from "images/youtube-icon.svg";
 
-const StyledModal = styled(ReactModalAdapter)`
-&.mainHeroModal__overlay {
-  ${tw`fixed inset-x-0 top-0 z-50 ` }
-}
-&.mainHeroModal__content {
-  ${tw`xl:mx-auto m-4 sm:m-16 max-w-screen-lg inset-0 flex items-center rounded-xl bg-gray-300 border-2 border-primary-500 outline-none`}
-}
-.content {
-  ${tw`w-full lg:p-16`}
-}
-`;
-
 const Container = tw.div`relative bg-gray-200 text-gray-700 -mb-8 -mx-8 px-8 py-20 lg:py-24`;
 const Content = tw.div`max-w-screen-xl mx-auto relative z-10`;
 const ThreeColumns = tw.div`columns-1 flex-wrap flex xl:flex-nowrap lg:columns-2 xl:columns-3 text-center justify-center -mt-12`;
-const LeftColumn = tw.div`px-4 sm:px-0 mt-12 sm:mr-4`;
-const MiddleColumn = tw.div`px-4 sm:px-0 mt-12 sm:ml-4`;
+const LeftColumn = tw.div`px-4 sm:px-0 mt-10 pt-4 sm:mr-4`;
 const RightColumn = tw.div`px-4 sm:px-0 mt-12 sm:ml-4`;
-
-
-
-const ColumnHeading = tw.h5`mb-6 uppercase font-bold text-primary-500`;
-const LinkList = tw.div`inline-block md:mr-12 text-sm font-medium columns-1`;
-const LinkListItem = tw.div`whitespace-nowrap mb-3 text-center sm:text-left`;
+const LinkListItem = tw.div`whitespace-nowrap mb-3 text-center inline-block mr-10`;
 const LinkItem = tw.a`mb-4 sm:mt-0   items-center text-secondary-300 transition duration-300 hover:text-primary-400 `;
-const RouterLink = styled(Link)`
-${tw`mt-4 sm:mt-0   items-center text-secondary-300 transition duration-300 hover:text-primary-400 `}
-}
-`;
+const RouterLink = styled(Link)`${tw`mt-4 sm:mt-0   items-center text-secondary-300 transition duration-300 hover:text-primary-400 `}}`;
+const Row = tw.div`flex flex-col lg:flex-row md:inline-block justify-between items-center mt-12 mb-0 inline-block md:ml-20 `;
 
-const SubscribeNewsletterColumn = tw(RightColumn)`mt-0 text-center w-full! lg:w-auto!`;
-const SubscribeNewsletterContainer = tw.div`max-w-sm`;
-const SubscribeText = tw.p`mt-2 text-sm font-medium text-gray-600`;
-const SubscribeForm = tw.form`mt-4 lg:mt-6 text-sm sm:flex max-w-xs sm:max-w-none mx-auto sm:mx-0`;
-const Input = tw.input`bg-gray-300 px-6 py-3 rounded sm:rounded-r-none border-2 sm:border-r-0 border-gray-400 hover:border-primary-500 focus:outline-none transition duration-300 w-full`;
-const SubscribeButton = tw(PrimaryButtonBase)`mt-4 sm:mt-0 w-1/2 sm:w-auto rounded sm:rounded-l-none px-4 py-3`;
-
-const Divider = tw.div`my-16 border-b-2 border-gray-300 w-full`;
+const Divider = tw.div`my-8 border-b-2 border-gray-300 w-full`;
 
 const ThreeColRow = tw.div`flex flex-col md:flex-row items-center justify-between`;
 
@@ -70,47 +42,37 @@ const SocialLink = styled.a`
   }
 `;
 
-function sendEmail(e){
+function sendEmail(e) {
   e.preventDefault();    //This is important, i'm not sure why, but the email won't send without it
-    emailjs.sendForm('service_gi12d6g', 'template_jafwo3o', e.target, 'm-8xebMSUuo6oS2sD')
+  emailjs.sendForm('service_gi12d6g', 'template_jafwo3o', e.target, 'm-8xebMSUuo6oS2sD')
     .then((result) => {
-        window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
+      window.location.reload()  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
     }, (error) => {
     });
 }
 
 export default () => {
-  const [inputValue, setInputValue] = useState(''); 
-  const handleSubmit = () => { 
-    if (inputValue.length > 0) { 
-        alert("Form submitted with value: " + inputValue); 
-    } 
-}; 
+  /*let [htmlFileString, setHtmlFileString] = useState();
+
+  async function fetchHtml() {
+    setHtmlFileString(await ((await fetch('contact.html')).text()));
+
+  }
+  useEffect(() => {
+    fetchHtml();
+  }, []);
+
+  const sanitizedData = DOMPurify.sanitize(htmlFileString);
+  console.log(sanitizedData);*/
+
   return (
-    
+
     <Container>
+
       <Content>
-       
-      <ThreeColumns id="threeColumns">
-      <MiddleColumn id="middlecolumn" class="basis-1/3">
-          
-          <LinkList >
-            <LinkListItem>
-              <LinkItem href = {ADATKEZELESI} target = "_blank">Adatvédelmi tájékoztató</LinkItem>
-            </LinkListItem>
-            <LinkListItem>
-              <LinkItem href = {alapitoOkirat} target = "_blank">Alapító okirat</LinkItem>
-            </LinkListItem>
-            <LinkListItem>
-              <RouterLink to="/reports">Beszámolók, támogatások</RouterLink>
-            </LinkListItem>
-            <LinkListItem>
-              <LinkItem href="https://www.facebook.com/OsszhangEgyesulet/events">Programjaink, szolgáltatásaink</LinkItem>
-            </LinkListItem>
-            <LinkListItem>
-              <RouterLink to="/writings">Várakozásról, szülésről, születésről</RouterLink>
-            </LinkListItem>
-          </LinkList>
+        <ThreeColumns id="threeColumns">
+
+
           {/*<LinkListItem>
               <LinkItem onClick={()=>{
                 setOpenedModal(3); 
@@ -119,30 +81,31 @@ export default () => {
                 setNameModal("Séta a szülés-születés minőségéért"); 
                 setContentModal("Évente megrendezett esemény, melyen az Egyesület elnöke is részt szokott venni. \nA sétával arra hívják fel a szervezők a figyelmet, hogy milyen messzire nyúló jelentősége lehet annak, hogy a szülés /születés milyen élmény az édesanya, a baba és a család számára.")}}>SzüléSzületés séta</LinkItem>
               </LinkListItem>*/}
-       </MiddleColumn>   
-      <LeftColumn id="mapColumn" class="basis-1/3">
-        <iframe title="osszhangLocation" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d668.6931652133547!2d20.370875654341976!3d47.902085323399994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47408d95e5c64b8d%3A0x1149b456b140b2d8!2zw5Zzc3poYW5nIEVneWVzw7xsZXQ!5e0!3m2!1shu!2shu!4v1693346325093!5m2!1shu!2shu" width="300" height="200" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          <LeftColumn id="mapColumn" class="basis-1/2">
+            <iframe title="osszhangLocation" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d668.6931652133547!2d20.370875654341976!3d47.902085323399994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47408d95e5c64b8d%3A0x1149b456b140b2d8!2zw5Zzc3poYW5nIEVneWVzw7xsZXQ!5e0!3m2!1shu!2shu!4v1693346325093!5m2!1shu!2shu" width="450" height="515" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
           </LeftColumn>
-          
-          
-      
-          
           <RightColumn id="newsletterColumn" class="basis-1/4">
-          <SubscribeNewsletterColumn id="column">
-            <SubscribeNewsletterContainer id="container">
-              <ColumnHeading>Iratkozz fel programértesítő leveleinkre</ColumnHeading>
-              <SubscribeText>
-                Minden hónapban elküldjük Neked a következő hónap eseményeit és egyéb érdekes és hasznos információkat
-              </SubscribeText>
-              <SubscribeForm method="get" action="#" onSubmit={sendEmail}>
-                <Input type="email" name="from_email" placeholder="Email-cím" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
-                <SubscribeButton onClick={handleSubmit} 
-                disabled={inputValue.length === 0} type="submit">Feliratkozás</SubscribeButton>
-              </SubscribeForm>
-            </SubscribeNewsletterContainer>
-          </SubscribeNewsletterColumn>
+          <iframe title="newsletter" src="contact.html" width="450" height="600" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+
           </RightColumn>
         </ThreeColumns>
+        <Row>
+          <LinkListItem>
+            <LinkItem href={ADATKEZELESI} target="_blank">Adatkezelési tájékoztató</LinkItem>
+          </LinkListItem>
+          <LinkListItem>
+            <LinkItem href={alapitoOkirat} target="_blank">Alapító okirat</LinkItem>
+          </LinkListItem>
+          <LinkListItem>
+            <RouterLink to="/reports">Beszámolók, támogatások</RouterLink>
+          </LinkListItem>
+          <LinkListItem>
+            <LinkItem href="https://www.facebook.com/OsszhangEgyesulet/events">Programjaink, szolgáltatásaink</LinkItem>
+          </LinkListItem>
+          <LinkListItem>
+            <RouterLink to="/writings">Várakozásról, szülésről, születésről</RouterLink>
+          </LinkListItem>
+        </Row>
         <Divider />
         <ThreeColRow>
           <LogoContainer>
@@ -161,9 +124,10 @@ export default () => {
               <YoutubeIcon />
             </SocialLink>
           </SocialLinksContainer>
-          
+
         </ThreeColRow>
-      </Content>      
+      </Content>
+
     </Container>
   );
-                };
+};

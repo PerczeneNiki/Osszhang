@@ -37,6 +37,9 @@ export default ({ id="navbar", navLinks = [
     </MyHashLink>   
     <MyHashLink smooth  to="#perinat" >
       Perinatális segítők
+    </MyHashLink>
+    <MyHashLink smooth  to="#infoemail" >
+      Emailsorozat
     </MyHashLink> 
     <MyHashLink smooth to="#onepercent" >
       Támogatás

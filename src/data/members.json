@@ -9,7 +9,7 @@
     {
       "src": "images/Kati.png",
       "description": "mentálhigiénés segítő szakember, transzperszonális terapeuta",
-      "name": "Tolnai Katalin",
+      "name": "Tolnay Katalin",
       "about": "A lelki egészség helyreállításában segítem a hozzám fordulókat. Egyéni és csoportos folyamatokat kísérek. A perinatális témához anyaságom élménye vezetett. Tagja vagyok az Orosz Katalin klinikai pszichológus irányításával működő Születés Kísérleti Műhelynek. Az ő módszerén alapuló Születni - Újjászületni csoportokban dolgozva sok tapasztalatot és tudást szereztem a születés életre gyakorolt hatásáról. Ez az élmény motiválja a munkámat."
     },
     {
@@ -49,10 +49,16 @@
       "about": "Egy alapvetően spirituális beállítottságú és végtelenül pozitív nő vagyok. Két gyermekemet egyedül nevelő édesanya, angol-magyar szakos tanár. Elkötelezett vagyok a környezetvédelem iránt. 2020-ban lettem hordozási tanácsadó. Női körvezető képzést és dúlaképzést fogok elvégezni a jövőben. Érdekel az aromaterápia és az illóolajok világa, ebben az irányban is tervezem a tudásom elmélyítését."
     },
     {
+      "src": "images/Kata.png",
+      "description": "pszichológus, perinatális szaktanácsadó",
+      "name": "Héjja-Nagy Katalin",
+      "about": "2000-ben végeztem a Debreceni Egyetemen pszichológus, pszichológia szakos tanár , angol szakfordító szakon. 2014-ben elvégeztem az ELTE perinatális szaktanácsadó képzését. Pszichodráma, hipnózis és relaxáció módszereiben képződtem, képződök. A Debreceni Egyetem Pszichológiai Intézetében oktatok pszichológus hallgatókat. Tanácsadó munkámban leginkább a perinatális problémák feldolgozásában segítek. Két kamasz fiú édesanyja vagyok."
+    },
+    {
       "src": "images/Szandra.png",
       "description": "integrál önismereti tanácsadó, bodywork csoportvezető, családállító, dúla",
       "name": "Veréb Szandra",
-      "about": "Bemutatkozás"
+      "about": "integrál önismereti tanácsadó, bodywork csoportvezető, családállító, dúla"
     },
     {
       "src": "images/Fanni.png",
@@ -60,23 +66,35 @@
       "name": "Alagyi-Kása Fanni",
       "about": "Pszichológiai tanulmányaimat 2006-ban kezdtem meg a Debreceni Egyetemen. A mesterképzést a Károli Gáspár Református Egyetemen végeztem, majd a szakképzést a Pécsi Tudományegyetemen teljesítettem. Időközben elvégeztem a C. G. Jung Komplex-pszichoterápiás Egyesület elméleti képzését. Gyakorlati tapasztalatot pedagógiai szakszolgálati munkában szereztem. Anyává válásom óta célkitűzésem, hogy a gyermekre várókat és a kisgyermekes szülőket segítsem."
     },
-    {
-      "src": "images/Kata.png",
-      "description": "pszichológus, perinatális szaktanácsadó",
-      "name": "Héjja-Nagy Katalin",
-      "about": "2000-ben végeztem a Debreceni Egyetemen pszichológus, pszichológia szakos tanár , angol szakfordító szakon. 2014-ben elvégeztem az ELTE perinatális szaktanácsadó képzését. Pszichodráma, hipnózis és relaxáció módszereiben képződtem, képződök. A Debreceni Egyetem Pszichológiai Intézetében oktatok pszichológus hallgatókat. Tanácsadó munkámban leginkább a perinatális problémák feldolgozásában segítek. Két kamasz fiú édesanyja vagyok."
+	{
+      "src": "images/SzFanni.png",
+      "description": "pszichopedagógus",
+      "name": "Szalay Fanni",
+      "about": "Régóta tudtam, hogy pszichopedagógus szeretnék lenni. Célom az volt, hogy érzelmileg sérült, tanulás-, viselkedésproblémás gyermekeknek segítsek, fejlődésüket támogassam. Hiszem, hogy a szülök megfelelő és hiteles információk birtokában sokkal “könnyebben” boldogulnak a gyermeknevelés útvesztőiben. A családalapítás óta különösen foglalkoztat a kötődés, kötődő nevelés témaköre, de készségesen állok rendelkezésre viselkedéssel, viselkedéselemzéssel, illetve korrekcióval kapcsolatos kérdésekben."
+    },
+	{
+      "src": "images/Timi.png",
+      "description": "",
+      "name": "Nagy Tímea",
+      "about": ""
     },
     {
       "src": "images/unknown.png",
-      "description": "???",
+      "description": "tanár",
       "name": "Szilágyi Katalin",
-      "about": "Bemutatkozás"
+      "about": ""
     },
     {
       "src": "images/unknown.png",
-      "description": "???",
+      "description": "grafikus",
+      "name": "Milodánovics Ágnes",
+      "about": "grafikus"
+    },
+    {
+      "src": "images/unknown.png",
+      "description": "marketinges",
       "name": "Gyetvai-Girhiny Eszter",
-      "about": "Bemutatkozás"
+      "about": "Az Egyesület médiamegjelenéseit segítem."
     }
   ]
 }

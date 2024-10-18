@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import style from 'styles/style.css';
 
   
 export const Button = styled.div`

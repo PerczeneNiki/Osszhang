@@ -6,7 +6,6 @@ import { SectionHeading, Subheading as SubheadingBase } from "components/misc/He
 import { SectionDescription } from "components/misc/Typography.js";
 import { Container } from "components/misc/Layouts.js";
 import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
-import IlikeImage from "images/Ilike.png";
 import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
 import ReactModalAdapter from "../../helpers/ReactModalAdapter.js";
 import InfoModal from "components/infopages/InfoModal.js";
@@ -65,12 +64,6 @@ const DecoratorBlob = styled(SvgDecoratorBlob3)`
 
 export default ({id="",
   cards = [
-    {
-      imageSrc: IlikeImage,
-      title: "Feithné Krajcsik Ilona",
-      description: "perinatális szaktanácsadó, önkéntes szoptatást segítő, jógaoktató, ének-zene szakos tanár",
-      url: "https://timerse.com"
-    }    
   ],
   linkText = "Bemutatkozás",
   heading = "Cím",

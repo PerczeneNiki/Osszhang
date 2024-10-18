@@ -2,9 +2,10 @@ import React from "react";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import { useEffect } from "react";
 import tw from "twin.macro";
-import  { MyHashLink, NavLinks  } from "../components/header/light.js";
+import { MyHashLink, NavLinks } from "../components/header/light.js";
 import Footer from "components/footers/Footer.js";
 import Members from "components/features/Members.js";
+import Gallery from "components/features/Gallery.js";
 import Starts from "components/features/Starts.js";
 import Reviews from "components/features/Reviews.js";
 import NavBar from "components/header/NavBar.js";
@@ -12,6 +13,7 @@ import ContactUsForm from "components/features/ContactUs.js";
 import foundersData from "data/founders.json";
 import membersData from "data/members.json";
 import reviewsData from "data/reviews.json";
+import photos from "data/gallery.json";
 
 
 import szuloFotel from "images/szulofotel.jpg";
@@ -23,13 +25,14 @@ import { ReactComponent as HeartIcon } from "feather-icons/dist/icons/heart.svg"
 
 const Subheading = tw.span`uppercase tracking-wider text-sm`;
 export default () => {
-  
+
   const foundersItems = foundersData["items"];
   const membersItems = membersData["items"];
   const reviewsItems = reviewsData["items"];
-   useEffect(() => {
-     window.scrollTo(0, 0)
-   }, [])
+  const photoItems = photos["items"];
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const navLinks = [
     <NavLinks key={1}>
@@ -38,6 +41,9 @@ export default () => {
       </MyHashLink>
       <MyHashLink smooth to="#members">
         Önkénteseink
+      </MyHashLink>
+      <MyHashLink smooth to="#gallery">
+        Galéria
       </MyHashLink>
       <MyHashLink smooth to="#starts">
         Hogyan kezdődött?
@@ -49,11 +55,12 @@ export default () => {
         Vélemények
       </MyHashLink>
     </NavLinks>
-    
+
   ];
-  return (    
+  return (
     <AnimationRevealPage>
-      <NavBar id="aboutpageNavbar" roundedHeaderButton={true} navLinks={navLinks}/>
+      <NavBar id="aboutpageNavbar" roundedHeaderButton={true} navLinks={navLinks} />
+      <div style={{paddingTop: "10px"}}></div>
       <Members id="founders" heading="Alapítók" cards={[
         foundersItems.map((item) => (
           {
@@ -63,10 +70,10 @@ export default () => {
             about: item["about"]
           }
         ))
-      ]}/>
-      
+      ]} />
+
       <Members id="members" heading="Önkénteseink" cards={[
-         membersItems.map((item) => (
+        membersItems.map((item) => (
           {
             imageSrc: item["src"],
             title: item["name"],
@@ -77,6 +84,13 @@ export default () => {
 
       ]
       } />
+      <Gallery id="gallery" heading="Galéria" items={[
+        photoItems.map((item) => (
+          {
+            imageSrc: item["src"],
+          }))
+      ]}></Gallery>
+     
       <Starts id="starts"
         subheading={<Subheading>Kezdetek</Subheading>}
         heading="Az alapítás"
@@ -84,7 +98,7 @@ export default () => {
         buttonRounded={false}
         primaryButtonText="Bővebben"
         imageSrc={katanili}
-        features = {[
+        features={[
           {
             Icon: HeartIcon,
             title: "Mottó",
@@ -102,7 +116,7 @@ export default () => {
         imageSrc={szuloFotel}
         textOnLeft={false}
         description="A fotel azért készült, hogy az édesanyáknak Egerben is legyen lehetőségük a most általános fekvő testhelyzettől eltérő szülési pozíciót választani. Az anyák nagyon szerettek, szeretnek a babzsákfotelban ülni. Felveszi a testük alakját, gyengéden támasztja meg, körbeöleli. Innen indultak el Ilike alkotó gondolatai."
-        features = {[
+        features={[
           {
             Icon: HeartIcon,
             title: "Az ötlet",
@@ -116,7 +130,7 @@ export default () => {
             iconContainerCss: tw`bg-red-300 text-red-800`
           }
         ]}
-/>
+      />
 
       <Starts id="goals"
         subheading={<Subheading>Kezdetek</Subheading>}
@@ -126,7 +140,7 @@ export default () => {
         buttonRounded={false}
         primaryButtonText="Bővebben"
         imageSrc={goalsImage}
-        features = {[
+        features={[
           {
             Icon: HeartIcon,
             title: "Optimális életkezdet",
@@ -140,10 +154,10 @@ export default () => {
             iconContainerCss: tw`bg-red-300 text-red-800`
           }
         ]}
-        
+
       />
       <Reviews id="reviews" heading="Vélemények" reviews={[
-         reviewsItems.map((item) => (
+        reviewsItems.map((item) => (
           {
             Icon: HeartIcon,
             name: item["name"],

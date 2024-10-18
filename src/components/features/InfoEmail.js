@@ -4,7 +4,7 @@ import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import {ReactComponent as SvgDotPatternIcon} from "../../images/dot-pattern.svg"
 import emailjs from 'emailjs-com';
-import emailsorozat from "images/emailsorozat.png";
+import emailsorozat from "images/emails.jpg";
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
@@ -26,19 +26,13 @@ const FormContainer = styled.div`
   }
 `;
 
-const TwoColumn = tw.div`flex flex-col sm:flex-row justify-between`;
+const TwoColumn = tw.div`flex flex-col sm:flex-row place-content-evenly`;
 const Column = tw.div`sm:w-5/12 flex flex-col`;
 const ImageColumn = tw(Column)`md:w-5/12 flex-shrink-0 h-80 md:h-auto`;
 const Image = styled.div(props => [
   `background-image: url("${props.imageSrc}");`,
   tw`rounded bg-contain bg-no-repeat bg-center h-full`
 ]);
-const InputContainer = tw.div`relative py-5 mt-6`;
-const Label = tw.label`absolute top-0 left-0 tracking-wide font-semibold text-sm`;
-const Input = tw.input``;
-const TextArea = tw.textarea`h-24 sm:h-full resize-none`;
-const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-gray-100 text-primary-500 rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-gray-300 hover:text-primary-700 hocus:-translate-y-px hocus:shadow-xl`;
-
 const SvgDotPattern1 = tw(SvgDotPatternIcon)`absolute bottom-0 right-0 transform translate-y-1/2 translate-x-1/2 -z-10 opacity-50 text-primary-500 fill-current w-24`
  
 function sendEmail(e){
@@ -60,7 +54,7 @@ export default ({id="infoemail"}) => {
         <Content>
         <FormContainer>
           <div tw="mx-auto max-w-4xl">
-            <h2>Segítünk felkészülni! Iratkozz fel email sorozatunkra!</h2>
+            <h2>Segítünk felkészülni! Iratkozz fel ingyenes email sorozatunkra!</h2>
             <h3>Hasznos információk a várandósságtól a kisgyermekes időszakig.</h3>
             <form action="#" onSubmit={sendEmail}>
               <TwoColumn>
@@ -68,7 +62,9 @@ export default ({id="infoemail"}) => {
           <Image imageSrc={emailsorozat} />
         </ImageColumn>
                 <Column>
-                  <InputContainer>
+          <iframe title="infoemail" src="infoemails.html" width="auto" height="410" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                
+                  {/*<InputContainer>
                     <Label htmlFor="from_name">Hogyan szólíthatunk?</Label>
                     <Input id="from_name" type="text" name="from_name" placeholder="pl. Nagy Anna" />
                   </InputContainer>
@@ -76,12 +72,17 @@ export default ({id="infoemail"}) => {
                     <Label htmlFor="from_email">Email címed</Label>
                     <Input id="from_email" type="email" name="from_email" placeholder="pl. nagya@gmail.com" />
                   </InputContainer>
-                  <SubmitButton type="submit" value="Submit">Küldés</SubmitButton>
+                  <SubmitButton type="submit" value="Submit">Küldés</SubmitButton>*/}
                 </Column>
               </TwoColumn>
 
               
             </form>
+
+            <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v2d8fb22bb5b3677f161552cd9e774127" type="text/javascript"></script>
+        <script>
+            fetch("https://assets.mailerlite.com/jsonp/658136/forms/117251669505344988/takel")
+        </script>
           </div>
           <SvgDotPattern1 />
         </FormContainer>

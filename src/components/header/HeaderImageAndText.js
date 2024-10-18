@@ -2,7 +2,7 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { SectionHeading } from "components/misc/Headings.js";
-import banner from "../../images/banner.png";
+import banner from "../../images/banner2.png";
 
 const Container = styled.div`
   ${tw`relative flex flex-col flex-wrap bg-cover`}

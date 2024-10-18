@@ -273,7 +273,7 @@ module.exports = {
       DEFAULT: '1',
     },
     fontFamily: {
-      display: ['Inter', 'system-ui'],
+      display: ['CastaThin', 'system-ui'],
       sans: [
         'system-ui',
         '-apple-system',
@@ -293,10 +293,10 @@ module.exports = {
       mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
     },
     fontSize: {
-      xs: '1rem',
-      sm: '1rem',
-      base: '1rem',
-      lg: '1.1rem',
+      xs: '1.2rem',
+      sm: '1.2rem',
+      base: '1.2rem',
+      lg: '1.2rem',
       xl: '1.2rem',
       '2xl': '1.4rem',
       '3xl': '1.8rem',

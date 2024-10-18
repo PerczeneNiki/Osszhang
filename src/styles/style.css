@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'CastaThin';
+    src: url('../fonts/CastaThin.ttf') format('CastaThin'),
+    /* Add additional font formats if necessary */
+    /* Specify the correct path to the font files */
+  }
+  
+  body {
+    font-family: 'CastaThin', sans-serif;
+  }

@@ -81,7 +81,7 @@ export default ({id="perinat",
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
            
-            <PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>
+            <PrimaryButton buttonRounded={buttonRounded} target="_blank" as="a" href={primaryButtonUrl}>
               {primaryButtonText}
             </PrimaryButton>
           </TextContent>

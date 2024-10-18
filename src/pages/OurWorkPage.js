@@ -9,6 +9,8 @@ import YearlyPrograms from "components/features/YearlyPrograms.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import NavBar from "components/header/NavBar.js";
 import ContactUsForm from "components/features/ContactUs.js";
+import SzH from "components/features/SzH.js";
+
 
 const PrimaryButton = styled(PrimaryButtonBase)(props => [
   tw`mt-0 md:mt-0 text-sm inline-block items-center mx-auto md:mx-0`,
@@ -33,6 +35,9 @@ export default () => {
       <MyHashLink smooth to="#yearlyprograms">
         Évkör
       </MyHashLink>
+      <MyHashLink smooth to="#szh">
+        Születés Hete 2024
+      </MyHashLink>
       
     </NavLinks>
   ];
@@ -54,6 +59,7 @@ export default () => {
         decoratorBlobCss={tw`xl:w-40 xl:h-40 opacity-15 -translate-x-1/2 left-1/2`}
       />
 <ContactUsForm />
+<SzH id="szh"></SzH>
       <Footer />
     </AnimationRevealPage>
   );
